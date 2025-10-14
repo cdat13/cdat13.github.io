@@ -43,4 +43,65 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4000); 
 });
 
+// Scroll up
+let lastScrollTop = 0;
+let ticking = false;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        navbar.classList.add("hidden");
+      } else {
+        navbar.classList.remove("hidden");
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+// Load up
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector(".section-plan");
+  if (!section) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          section.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.3 } // kích hoạt khi 30% section xuất hiện
+  );
+
+  observer.observe(section);
+});
+
+// HR Amination
+document.addEventListener("DOMContentLoaded", function () {
+  const hrs = document.querySelectorAll(".hr-animate");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  hrs.forEach((hr) => observer.observe(hr));
+});
+
+
 
