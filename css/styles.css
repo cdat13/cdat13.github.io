@@ -2527,6 +2527,44 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
+/* 🔹 Nút mạng xã hội */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  background-color: #e7d9af;
+  color: #2a2869;
+  box-shadow: 0 0 10px rgba(211, 195, 146, 0.6);
+}
+
+.fb-btn {
+  background-color: #1877f2;
+}
+
+.zalo-btn {
+  background-color: #0088cc;
+  overflow: hidden;
+}
+
+.zalo-btn .zalo-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(100%);
+}
+
 .form-range {
   width: 100%;
   height: 1.5rem;
