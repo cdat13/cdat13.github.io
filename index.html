@@ -26,8 +26,8 @@
     <main class="flex-shrink-0">
 
         <!-- Nav bar start here!-->
-        <nav class="navbar navbar-expand-xl navbar-dark bg-dark text-bolder fixed-top">
-            <div class="container px-5">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark text-bolder fixed-top nav-compact">
+            <div class="container px-5 ">
                 <a class="navbar-brand" href="index.html">CẢNG BIỂN GÒ CÔNG</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,7 +38,15 @@
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-xl-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Thông tin cảng</a></li>
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Thông tin cảng</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                <li><a class="dropdown-item" href="port-geo-info.html">Vị trí địa lý</a></li>
+                                <li><a class="dropdown-item" href="#">Quy mô dự án</a></li>
+                                <li><a class="dropdown-item" href="#">Công nghệ vận hành</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Phân khu cảng</a>
@@ -64,12 +72,11 @@
                 </div>
             </div>
         </nav>
-
         <!-- Navbar end -->
 
 
         <!-- Header start here! -->
-        <header class="hero-header position-relative">
+        <header class="hero-header position-relative hero-section">
             <!-- Slider nền -->
             <div class="slider-wrapper">
                 <div class="slider">
@@ -132,36 +139,12 @@
                             <i class="bi bi-arrow-right" style="margin-left: 8px;"></i>
                         </a>
                     </div>
-
                     <div class="col-lg-7">
-                        <!-- Icon container can be used later!!! -->
-                        <!-- <div class="row gx-5 row-cols-1 row-cols-md-2">
-                                <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                                    <h2 class="h5">Featured title</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                                <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                                    <h2 class="h5">Featured title</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                                <div class="col mb-5 mb-md-0 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Featured title</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                                <div class="col h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Featured title</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                            </div> -->
-
-                        <img class="img-fluid2 my-5" src="../img/map_GC.jpg" loading="lazy" decoding="async"
-                            alt="Ban do cang Go Cong" draggable="false">
+                    <img class="img-fluid2 my-5" src="../img/map_GC.jpg" loading="lazy" decoding="async"
+                        alt="Ban do cang Go Cong" draggable="false">
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -290,18 +273,16 @@
                         <img class=" img-fluid3 rounded-3" src="../img/mbtt_remove.png"
                             alt="Mat bang tong the khu kinh te bien Go Cong">
                     </div>
-
                 </div>
-
             </div>
         </section>
 
         <section class="section-plan text-center">
-            <div class="container px-5">
-                <div class="row justify-content-center mb-4">
+            <div class="container px-5 ">
+                <div class="row container justify-content-center mb-4 content-wrapper">
                     <div class="col-lg-8">
                         <h1 class="">Quy hoạch Cảng</h1>
-                        <p>
+                        <p class="plan-desc">
                             Sở hữu vị trí thuận lợi, Cảng Gò Công được định hướng trở thành trung tâm logistics chiến
                             lược,
                             kết nối các vùng kinh tế trọng điểm và đóng vai trò quan trọng trong phát triển khu vực.
@@ -309,10 +290,11 @@
                     </div>
                 </div>
 
+            </div>
+            
                 <div class="image-wrapper">
                     <img src="../img/final.png" alt="Sơ đồ quy hoạch cảng">
                 </div>
-            </div>
         </section>
 
 
@@ -499,8 +481,7 @@
                                 <i class="bi bi-facebook"></i>
                             </a>
                             <a href="https://zalo.me/0837137697" target="_blank" class="social-btn zalo-btn">
-                                <img src="../img/Zalo_icon.webp"
-                                    alt="Zalo" class="zalo-icon">
+                                <img src="../img/Zalo_icon.webp" alt="Zalo" class="zalo-icon">
                             </a>
                         </div>
                     </div>

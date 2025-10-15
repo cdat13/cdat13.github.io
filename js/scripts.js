@@ -103,5 +103,20 @@ document.addEventListener("DOMContentLoaded", function () {
   hrs.forEach((hr) => observer.observe(hr));
 });
 
+// Plan decs scroll up
+document.addEventListener("DOMContentLoaded", function () {
+  const paragraphs = document.querySelectorAll(".plan-desc");
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Thêm delay nhẹ cho từng đoạn để nhìn mượt hơn
+        entry.target.style.transitionDelay = `${index * 0.15}s`;
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 }); // Khi 20% phần tử xuất hiện thì bắt đầu
+
+  paragraphs.forEach(p => observer.observe(p));
+});
 
