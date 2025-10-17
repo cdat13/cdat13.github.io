@@ -43,28 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4000); 
 });
 
-// Scroll up
-let lastScrollTop = 0;
-let ticking = false;
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop && scrollTop > 100) {
-        navbar.classList.add("hidden");
-      } else {
-        navbar.classList.remove("hidden");
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
 
 // Load up
 document.addEventListener("DOMContentLoaded", function () {
@@ -79,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.3 } // kích hoạt khi 30% section xuất hiện
+    { threshold: 0.3 } 
   );
 
   observer.observe(section);
@@ -120,3 +98,88 @@ document.addEventListener("DOMContentLoaded", function () {
   paragraphs.forEach(p => observer.observe(p));
 });
 
+// Nav bar here
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = document.getElementById('mainNav');
+  if (!navbar) return; // nếu ko có navbar thì dừng
+
+  const toggler = document.querySelector('.navbar-toggler');
+  const collapse = document.getElementById('navbarSupportedContent');
+
+  // đảm bảo trạng thái ban đầu visible
+  navbar.classList.remove('hide');
+  navbar.classList.add('show');
+
+  let lastScrollY = window.scrollY || 0;
+
+  // helper: chỉ ẩn navbar trên desktop (>= lg)
+  function isDesktop() {
+    return window.innerWidth >= 992; // tương ứng bootstrap lg
+  }
+
+  // xử lý scroll
+  function onScroll() {
+    // nếu mobile - giữ luôn hiện (tránh ẩn khi mở menu)
+    if (!isDesktop()) {
+      navbar.classList.remove('hide');
+      navbar.classList.add('show');
+      lastScrollY = window.scrollY;
+      return;
+    }
+
+    // nếu collapse đang mở thì không ẩn
+    if (collapse && collapse.classList.contains('show')) {
+      lastScrollY = window.scrollY;
+      return;
+    }
+
+    const current = window.scrollY || 0;
+
+    if (current > lastScrollY && current > 80) {
+      // cuộn xuống => ẩn
+      navbar.classList.remove('show');
+      navbar.classList.add('hide');
+    } else {
+      // cuộn lên => hiện
+      navbar.classList.remove('hide');
+      navbar.classList.add('show');
+    }
+
+    lastScrollY = current;
+  }
+
+  // attach scroll with passive option for perf
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // khi click hamburger: ép hiện nav (an toàn nếu toggler không tồn tại)
+  if (toggler) {
+    toggler.addEventListener('click', function () {
+      navbar.classList.remove('hide');
+      navbar.classList.add('show');
+    });
+  }
+
+  // Nếu dùng Bootstrap collapse, lắng nghe sự kiện để tắt bật logic khi menu mở/đóng
+  if (collapse) {
+    // Khi menu mobile mở -> đảm bảo navbar hiện
+    collapse.addEventListener('shown.bs.collapse', function () {
+      navbar.classList.remove('hide');
+      navbar.classList.add('show');
+    });
+    // Khi đóng -> cập nhật lastScrollY để tránh nhảy
+    collapse.addEventListener('hidden.bs.collapse', function () {
+      lastScrollY = window.scrollY || 0;
+    });
+  }
+
+  // Khi resize: nếu chuyển qua mobile thì hiện navbar; update lastScrollY
+  window.addEventListener('resize', function () {
+    if (!isDesktop()) {
+      navbar.classList.remove('hide');
+      navbar.classList.add('show');
+    }
+    lastScrollY = window.scrollY || 0;
+  });
+});
+
+// Bang info nha
