@@ -1,11 +1,8 @@
-/*!
+/*
 * Start Bootstrap - Modern Business v5.0.7 (https://startbootstrap.com/template-overviews/modern-business)
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-modern-business/blob/master/LICENSE)
 */
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
-
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 2500;
 
@@ -119,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // xử lý scroll
   function onScroll() {
-    // nếu mobile - giữ luôn hiện (tránh ẩn khi mở menu)
+    // nếu mobile - giữ luôn hiện 
     if (!isDesktop()) {
       navbar.classList.remove('hide');
       navbar.classList.add('show');
@@ -136,11 +133,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const current = window.scrollY || 0;
 
     if (current > lastScrollY && current > 80) {
-      // cuộn xuống => ẩn
       navbar.classList.remove('show');
       navbar.classList.add('hide');
     } else {
-      // cuộn lên => hiện
       navbar.classList.remove('hide');
       navbar.classList.add('show');
     }
@@ -148,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
     lastScrollY = current;
   }
 
-  // attach scroll with passive option for perf
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // khi click hamburger: ép hiện nav (an toàn nếu toggler không tồn tại)
@@ -159,9 +153,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Nếu dùng Bootstrap collapse, lắng nghe sự kiện để tắt bật logic khi menu mở/đóng
+  // dùng Bootstrap collapse, lắng nghe sự kiện để tắt bật logic khi menu mở/đóng
   if (collapse) {
-    // Khi menu mobile mở -> đảm bảo navbar hiện
+    // Khi menu mobile mở, navbar hiện
     collapse.addEventListener('shown.bs.collapse', function () {
       navbar.classList.remove('hide');
       navbar.classList.add('show');
@@ -182,4 +176,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Bang info nha
+// Timeline js
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".timeline-item");
+  const panels = document.querySelectorAll(".timeline-panel");
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Remove active
+      items.forEach((i) => i.classList.remove("active"));
+      panels.forEach((p) => p.classList.remove("active"));
+
+      // Activate new
+      item.classList.add("active");
+      const year = item.getAttribute("data-year");
+      document.getElementById(`year-${year}`).classList.add("active");
+    });
+  });
+});

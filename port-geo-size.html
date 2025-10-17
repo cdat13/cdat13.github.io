@@ -17,6 +17,7 @@
 
 <body class="d-flex flex-column">
     <main class="flex-shrink-0">
+
         <!-- Navigation done!-->
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
@@ -32,8 +33,8 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">Thông tin cảng</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                                 <li><a class="dropdown-item" href="port-geo-info.html">Vị trí địa lý</a></li>
-                                <li><a class="dropdown-item" href="#">Quy mô dự án</a></li>
-                                <li><a class="dropdown-item" href="port-geo-size.html">Công nghệ vận hành</a></li>
+                                <li><a class="dropdown-item" href="port-geo-size.html">Quy mô dự án</a></li>
+                                <li><a class="dropdown-item" href="port-geo-tech.html">Công nghệ vận hành</a></li>
 
                             </ul>
                         </li>
@@ -56,6 +57,7 @@
             </div>
         </nav>
 
+        <!-- Hero banner -->
         <section class="hero-section text-start justify-content-start">
             <div class="hero-background">
                 <img src="../img/final.png" alt="Hạ tầng & Trang thiết bị" class="hero-image">
@@ -70,6 +72,7 @@
             </div>
         </section>
 
+        <!-- Size section -->
         <section class="py-5">
             <div class="container px-5 my-5">
                 <div class="row gx-5 align-items-center">
@@ -93,28 +96,28 @@
             </div>
         </section>
 
-        <!-- About section one-->
+        <!-- Route section-->
         <section class="py-5 bg-light" id="scroll-target">
             <div class="container px-5 my-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0"
-                            src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                            src="../img/Project_subdivision.jpg" alt="Phân khu dự án" /></div>
                     <div class="col-lg-6">
-                        <h2 class="fw-bolder">Lộ trình đầu tư</h2>
+                        <h1 >Lộ trình đầu tư</h1>
                         <p class="plan-desc">
-                            Giai đoạn 1 tập trung xây dựng 1.800m bến cập tàu cùng khu
+                            <strong>Giai đoạn 1</strong> tập trung xây dựng 1.800m bến cập tàu cùng khu
                             dịch vụ hậu cần và logistics phía sau cầu tàu với quy mô khoảng 121ha.
                         </p>
                         <p class="plan-desc">
-                            Giai đoạn 2 tiếp tục mở rộng thêm 1.200m bến cập tàu phía hạ lưu, kết hợp phát triển khu hậu
+                             <strong>Giai đoạn 2</strong> tiếp tục mở rộng thêm 1.200m bến cập tàu phía hạ lưu, kết hợp phát triển khu hậu
                             cần – logistics quy mô 89ha, hoàn thiện chuỗi dịch vụ cảng hiện đại.
                         </p>
                         <p class="plan-desc">
-                            Sang giai đoạn 3, dự án đầu tư khu logistics chuyên biệt rộng khoảng 105ha, tạo trung tâm
+                            <strong>Giai đoạn 3</strong> dự án đầu tư khu logistics chuyên biệt rộng khoảng 105ha, tạo trung tâm
                             lưu thông hàng hóa quy mô vùng.
                         </p>
                         <p class="plan-desc">
-                            Cuối cùng, giai đoạn 4 sẽ triển khai khu dịch vụ phía hạ lưu (giáp biển) với diện tích
+                            <strong>Giai đoạn 4</strong> sẽ triển khai khu dịch vụ phía hạ lưu (giáp biển) với diện tích
                             khoảng 75ha, trong đó có 500m bến tàu khách quốc tế tổng hợp, góp phần hoàn thiện toàn bộ
                             quần thể cảng Gò Công, nâng tầm năng lực hạ tầng cảng biển khu vực Đồng bằng sông Cửu Long.
                         </p>
@@ -122,125 +125,210 @@
                 </div>
             </div>
         </section>
-        <!-- About section two-->
+
+        <!-- Timeline section-->
         <section class="section-history py-5">
             <div class="container">
-                <h2 class="text-center mb-4">Lịch sử hình thành & phát triển</h2>
+                <h1 class="text-center mb-5"> Tiến độ dự án</h1>
 
-                <!-- Nút chọn năm -->
-                <ul class="nav nav-pills justify-content-center mb-4" id="historyTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="year-2000-tab" data-bs-toggle="tab"
-                            data-bs-target="#year-2000" type="button" role="tab">
-                            2000
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="year-2010-tab" data-bs-toggle="tab" data-bs-target="#year-2010"
-                            type="button" role="tab">
-                            2010
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="year-2020-tab" data-bs-toggle="tab" data-bs-target="#year-2020"
-                            type="button" role="tab">
-                            2020
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="year-2025-tab" data-bs-toggle="tab" data-bs-target="#year-2025"
-                            type="button" role="tab">
-                            2025
-                        </button>
-                    </li>
-                </ul>
-
-                <!-- Nội dung các năm -->
-                <div class="tab-content" id="historyTabContent">
-                    <!-- 2000 -->
-                    <div class="tab-pane fade show active" id="year-2000" role="tabpanel">
-                        <div class="history-text px-lg-5">
-                            <p>2000: Thành lập công ty, bắt đầu với dự án nhỏ trong lĩnh vực xây dựng dân dụng.</p>
-                            <p>2003: Mở rộng sang các dự án hạ tầng giao thông địa phương.</p>
-                        </div>
+                <!-- Timeline -->
+                <div class="timeline">
+                    <div class="timeline-item active" data-year="2023">
+                        <div class="timeline-dot"></div>
+                        <h5>2023</h5>
                     </div>
-                    <!-- 2010 -->
-                    <div class="tab-pane fade" id="year-2010" role="tabpanel">
-                        <div class="history-text px-lg-5">
-                            <p>2010: Ricons thực hiện dự án đầu tiên về cảng biển.</p>
-                            <p>2012: Liên doanh quốc tế và áp dụng công nghệ xây dựng hiện đại.</p>
-                        </div>
+                    <div class="timeline-item" data-year="2025">
+                        <div class="timeline-dot"></div>
+                        <h5>2025</h5>
                     </div>
-                    <!-- 2020 -->
-                    <div class="tab-pane fade" id="year-2020" role="tabpanel">
-                        <div class="history-text px-lg-5">
-                            <p>2020: Tổng công suất các dự án vượt mốc 1 tỷ USD.</p>
-                            <p>2021: Khởi động dự án Cảng Gò Công – Tiền Giang.</p>
-                        </div>
+                    <div class="timeline-item" data-year="2027">
+                        <div class="timeline-dot"></div>
+                        <h5>2027</h5>
                     </div>
-                    <!-- 2025 -->
-                    <div class="tab-pane fade" id="year-2025" role="tabpanel">
-                        <div class="history-text px-lg-5">
-                            <p>2025: Dự kiến hoàn thành giai đoạn 1, vận hành thử nghiệm.</p>
-                            <p>2026 trở đi: Mở rộng sang các dự án logistics và khu công nghiệp liên quan.</p>
-                        </div>
+                    <div class="timeline-item" data-year="2030">
+                        <div class="timeline-dot"></div>
+                        <h5>2030</h5>
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-
-        <!-- Team members section-->
-        <section class="py-5 bg-light">
-            <div class="container px-5 my-5">
-                <div class="text-center">
-                    <h2 class="fw-bolder">Our team</h2>
-                    <p class="lead fw-normal text-muted mb-5">Dedicated to quality and your success</p>
-                </div>
-                <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5 mb-5 mb-xl-0">
-                        <div class="text-center">
-                            <img class="img-fluid rounded-circle mb-4 px-4"
-                                src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                            <h5 class="fw-bolder">Ibbie Eckart</h5>
-                            <div class="fst-italic text-muted">Founder &amp; CEO</div>
-                        </div>
+                <!-- Nội dung -->
+                <div class="timeline-content mt-4">
+                    <div class="timeline-panel active" id="year-2023">
+                        <p>Blalalalala</p>
+                        <p>Blalalalala</p>
                     </div>
-                    <div class="col mb-5 mb-5 mb-xl-0">
-                        <div class="text-center">
-                            <img class="img-fluid rounded-circle mb-4 px-4"
-                                src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                            <h5 class="fw-bolder">Arden Vasek</h5>
-                            <div class="fst-italic text-muted">CFO</div>
-                        </div>
+                    <div class="timeline-panel" id="year-2025">
+                        <p>2010: Thực hiện dự án cảng biển đầu tiên.</p>
+                        <p>2012: Liên doanh quốc tế và ứng dụng công nghệ xây dựng hiện đại.</p>
                     </div>
-                    <div class="col mb-5 mb-5 mb-sm-0">
-                        <div class="text-center">
-                            <img class="img-fluid rounded-circle mb-4 px-4"
-                                src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                            <h5 class="fw-bolder">Toribio Nerthus</h5>
-                            <div class="fst-italic text-muted">Operations Manager</div>
-                        </div>
+                    <div class="timeline-panel" id="year-2027">
+                        <p>2020: Tổng giá trị đầu tư đạt mốc 1 tỷ USD.</p>
+                        <p>2021: Khởi động dự án Cảng tổng hợp Gò Công – Tiền Giang.</p>
                     </div>
-                    <div class="col mb-5">
-                        <div class="text-center">
-                            <img class="img-fluid rounded-circle mb-4 px-4"
-                                src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                            <h5 class="fw-bolder">Malvina Cilla</h5>
-                            <div class="fst-italic text-muted">CTO</div>
-                        </div>
+                    <div class="timeline-panel" id="year-2030">
+                        <p>2025: Hoàn thành giai đoạn 1 và đưa vào vận hành thử nghiệm.</p>
+                        <p>2026 trở đi: Mở rộng đầu tư sang logistics và khu công nghiệp liên kết.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Line break -->
+            <div class="section-divider-full">   </div>
+
+        <!-- What's next -->
+        <section class=" section-recommend">
+            <div class="container px-5 mt-5 mb-5">
+                <!-- Tiêu đề -->
+                <div class="row gx-5 align-items-center mb-4">
+                    <div class="col-12 col-lg-6">
+                        <h2>BẠN CÓ THỂ THÍCH</h2>
+                    </div>
+                    <div class="col-12 col-lg-6 text-lg-end text-center">
+
+                    </div>
+                </div>
+
+                <!-- Các bài viết -->
+                <div class="row gx-5 gy-5">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href=""
+                            class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
+                            <img class="card-img-top" src="../img/final.png" alt="Giới thiệu" />
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-3">Giới thiệu Phân khu cảng</h5>
+                                <p class="card-text mb-0">
+                                    Khám phá quy hoạch, cơ sở hạ tầng và tiềm năng phát triển của Phân khu cảng Gò Công
+                                    trong chiến lược logistics khu vực.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="news.html"
+                            class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
+                            <img class="card-img-top" src="../img/final.png" alt="Quy hoạch" />
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-3">Tin tức</h5>
+                                <p class="card-text mb-0">
+                                    Cập nhật những tiến độ mới nhất về dự án Khu kinh tế Cảng biển Gò Công.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="port-geo-tech.html"
+                            class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
+                            <img class="card-img-top" src="../img/final.png" alt="Tiện ích" />
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-3">Công nghệ vận hành</h5>
+                                <p class="card-text mb-0">
+                                    Cảng Gò Công được đầu tư đồng bộ với hạ tầng quy mô lớn và thiết bị hiện đại, sẵn sàng đáp ứng mọi nhu cầu khai thác hàng hóa.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email -->
+        <aside class="bg-dark bg-gradient p-4 p-sm-5">
+            <div
+                class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                <div class="mb-4 mb-xl-0">
+                    <div class="fs-5 fw-bold text-white">Nhập email để nhận thông tin mới nhất</div>
+                </div>
+                <div class="ms-xl-4">
+                    <div class="input-group mb-2">
+                        <input class="form-control" type="text" placeholder="Email address..."
+                            aria-label="Email address..." aria-describedby="button-newsletter" />
+                        <button class="btn btn-secondary" id="button-newsletter" type="button">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </main>
     <!-- Footer-->
     <footer class="bg-dark py-4 mt-auto">
+        <h1 class="text-white text-center text-bolder mb-4">KHU KINH TẾ BIỂN GÒ CÔNG</h1>
+        <div class="container px-4 px-md-5 px-5 my-5">
+            <div class="row gx-5 gy-4 justify-content-center">
+                <!-- Card about -->
+                <div class="col-md-6 col-12 col-lg-4">
+                    <div class="mb-5 mb-xl-0">
+                        <div class="p-5 text-white">
+                            <h3 class="fw-bold">Về SaiGon Group</h3>
+                            <span>Được thành lập vào năm 2002, Saigon Group đã có 25 năm phát triển vững chắc trong lĩnh
+                                vực
+                                xây dựng và tư vấn kỹ thuật,
+                                khẳng định vị thế là một đối tác tin cậy, kiến tạo nên những công trình chất lượng, góp
+                                phần
+                                vào sự phát triển của đất nước.</span>
+                            <div class="d-grid mt-3">
+                                <a class="btn btn-secondary btn-sm px-4 me-sm-3" href="../img/HoSoDoanhNghiep.pdf"
+                                    download="HoSoDoanhNghiep.pdf">
+                                    Tải hồ sơ doanh nghiệp
+                                    <i class="bi bi-arrow-bar-down" style="margin-left: 8px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card address -->
+                <div class="col-md-6 col-12 col-lg-4">
+                    <div class="mb-5 mb-xl-0">
+                        <ul class="list-unstyled small lh-lg text-white p-5">
+                            <li><strong>Trụ sở chính:</strong> 229 Phạm Văn Đồng, P. Hạnh Thông, TP. HCM</li>
+                            <li><strong>Chi nhánh:</strong> 48-50-52 Nam Kỳ Khởi Nghĩa, P. Sài Gòn, TP. HCM</li>
+                            <li><strong>Mã số thuế:</strong> 0302669340</li>
+                            <li><strong>Hotline:</strong> 0901 180 099</li>
+                            <li><strong>Điện thoại:</strong> 0919 179 229</li>
+                            <li><strong>Email:</strong> info@saigongroup.vn</li>
+                        </ul>
+
+                        <div class="d-flex gap-3 ps-5">
+                            <a href="https://www.facebook.com/saigongroup" target="_blank" class="social-btn fb-btn">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://zalo.me/0837137697" target="_blank" class="social-btn zalo-btn">
+                                <img src="../img/Zalo_icon.webp" alt="Zalo" class="zalo-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card nav hide in mobile! -->
+                <div class=" col-lg-4 d-none d-lg-block">
+                    <div class="p-5 text-white">
+                        <ul class="list-unstyled mb-4 navbar-nav">
+                            <li class="mb-2"><a href="port-geo-info.html" class="nav-link"><i
+                                        class="bi bi-arrow-right-short text-primary"></i> Thông tin dự án</a></li>
+                            <li class="mb-2"><a href="#" class="nav-link"><i
+                                        class="bi bi-arrow-right-short text-primary"></i> Phân khu cảng</a></li>
+                            <li class="mb-2"><a href="#" class="nav-link"><i
+                                        class="bi bi-arrow-right-short text-primary"></i> Đơn vị đối tác</a></li>
+                            <li class="mb-2"><a href="news.html" class="nav-link"><i
+                                        class="bi bi-arrow-right-short text-primary"></i> Tin tức</a></li>
+                            <li class="mb-2"><a href="#" class="nav-link"><i
+                                        class="bi bi-arrow-right-short text-primary"></i> Thư viện</a></li>
+                            <li class="mb-2"><a href="#" class="nav-link"><i
+                                        class="bi bi-arrow-right-short text-primary"></i> Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                 <div class="col-auto">
-                    <div class="small m-0 text-white">Copyright &copy; Your Website 2023</div>
+                    <div class="small m-0 text-white">Copyright &copy; 2025 SAIGON GROUP. All images are for demo
+                        purpose</div>
                 </div>
                 <div class="col-auto">
                     <a class="link-light small" href="#!">Privacy</a>
