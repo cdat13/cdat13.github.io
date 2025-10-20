@@ -9,7 +9,7 @@ let interval = 2500;
 valueDisplays.forEach((valueDisplay) => {
   let startValue = 0;
   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let stepTime = Math.max(Math.floor(interval / endValue), 10); 
+  let stepTime = Math.max(Math.floor(interval / endValue), 10);
   let increment = Math.ceil(endValue / (interval / stepTime));
 
   let counter = setInterval(() => {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       left: index * slider.clientWidth,
       behavior: "smooth"
     });
-  }, 4000); 
+  }, 4000);
 });
 
 
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.3 } 
+    { threshold: 0.3 }
   );
 
   observer.observe(section);
@@ -194,3 +194,69 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+//terminal 
+document.querySelectorAll(".terminal-section").forEach(section => {
+  const toggleBtn = section.querySelector(".toggle-btn");
+  const featureContent = section.querySelector(".terminal-feature");
+  const hr = section.querySelector("hr"); //
+
+  toggleBtn.addEventListener("click", () => {
+    featureContent.classList.toggle("open");
+    const isOpen = featureContent.classList.contains("open");
+
+    toggleBtn.innerHTML = isOpen ? "Ẩn bớt ▴" : "Xem chi tiết ▾";
+    if (hr) hr.style.display = isOpen ? "none" : "block";
+  });
+});
+
+
+// slider ne
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.blog-slide');
+  const prevBtn = document.querySelector('.btn-slide.prev');
+  const nextBtn = document.querySelector('.btn-slide.next');
+  const dotsContainer = document.querySelector('.slider-dots');
+  let current = 0;
+
+  // Tạo dots
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('button');
+    if(i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      current = i;
+      showSlide(current);
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  function showSlide(index){
+    slides.forEach((slide,i)=>{
+      slide.classList.toggle('active', i===index);
+    });
+    // update dots
+    const dots = dotsContainer.querySelectorAll('button');
+    dots.forEach((dot,i)=> dot.classList.toggle('active', i===index));
+  }
+
+  // Nút điều hướng (desktop)
+  if(prevBtn && nextBtn){
+    prevBtn.addEventListener('click', ()=>{
+      current = (current === 0) ? slides.length - 1 : current - 1;
+      showSlide(current);
+    });
+
+    nextBtn.addEventListener('click', ()=>{
+      current = (current === slides.length - 1) ? 0 : current + 1;
+      showSlide(current);
+    });
+  }
+
+  showSlide(current);
+});
+
+
+
+
+
