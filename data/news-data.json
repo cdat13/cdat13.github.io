@@ -1,0 +1,23 @@
+[
+  {
+    "id": "xay-dung-nha-may-mien-nam",
+    "title": "Khởi công xây dựng nhà máy miền Nam",
+    "date": "2025-04-15",
+    "image": "../img/final.png",
+    "content": "<p>Sáng ngày 15/4/2025, Saigon Group khởi công xây dựng nhà máy mới tại khu công nghiệp miền Nam nhằm đáp ứng nhu cầu sản xuất tăng cao.</p><p>Dự án được đầu tư hiện đại, sử dụng công nghệ tiên tiến, với mục tiêu hoàn thành trong vòng 18 tháng.</p>"
+  },
+  {
+    "id": "ra-mat-san-pham-logistics-moi",
+    "title": "Ra mắt sản phẩm logistics mới – giải pháp 4.0",
+    "date": "2025-05-02",
+    "image": "https://demo6.conet.vn/2025_saigongroup/uploads/news2.jpg",
+    "content": "<p>Ngày 2/5/2025, tại hội nghị khách hàng Saigon Group đã chính thức giới thiệu giải pháp logistics 4.0 với khả năng tối ưu hóa chuỗi cung ứng.</p><p>Giải pháp này kết hợp ứng dụng IoT, dữ liệu lớn và hệ thống quản lý điện tử nhằm giảm thời gian vận chuyển và chi phí.</p>"
+  },
+  {
+    "id": "giai-thuong-danh-gia-quoc-te",
+    "title": "Saigon Group nhận giải thưởng đánh giá quốc tế về bền vững",
+    "date": "2025-06-10",
+    "image": "https://demo6.conet.vn/2025_saigongroup/uploads/news3.jpg",
+    "content": "<p>Vào ngày 10/6/2025, Saigon Group được vinh danh tại lễ trao giải quốc tế về phát triển bền vững và trách nhiệm xã hội doanh nghiệp.</p><p>Giải thưởng ghi nhận những nỗ lực của công ty trong việc vận hành xanh, sử dụng năng lượng tái tạo và đảm bảo quyền lợi người lao động.</p>"
+  }
+]

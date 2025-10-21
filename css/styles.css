@@ -147,6 +147,14 @@ header>.container {
   opacity: 1 !important;
 }
 
+.hr4 {
+  border: none !important;
+  border-top: 1px solid #000 !important;
+  display: block;
+  margin: 0.5rem 0;
+  opacity: 0.1 !important;
+}
+
 .hr-animate {
   position: relative;
   width: 0;
@@ -592,7 +600,9 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
+   appearance: button;
   -webkit-appearance: button;
+  -moz-appearance: button; 
 }
 
 button:not(:disabled),
@@ -653,7 +663,9 @@ legend+* {
 
 [type=search] {
   outline-offset: -2px;
+  appearance: textfield;
   -webkit-appearance: textfield;
+  -moz-appearance: textfield; 
 }
 
 /* rtl:raw:
@@ -674,7 +686,9 @@ legend+* {
 
 ::file-selector-button {
   font: inherit;
+  appearance: button;
   -webkit-appearance: button;
+  -moz-appearance: button;
 }
 
 output {
@@ -5805,12 +5819,12 @@ fieldset:disabled .btn {
 .section-title .title-bg {
   display: block;
   width: 50%;
-  opacity: 20%;
+  opacity: 0.2;
   filter: grayscale(100%) brightness(1.2);
   z-index: 1;
   pointer-events: none;
   transition: none;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 
 @media (max-width: 992px) {
@@ -14550,4 +14564,5 @@ html {
   .blog-slide { flex-direction: column; }
   .bg-featured-blog { width: 100%; height: 180px; margin-top: 15px; }
 }
+
 
