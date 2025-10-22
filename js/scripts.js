@@ -3,25 +3,55 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-modern-business/blob/master/LICENSE)
 */
+
+
+// Auto number
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 2500;
 
-valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let stepTime = Math.max(Math.floor(interval / endValue), 10);
-  let increment = Math.ceil(endValue / (interval / stepTime));
+function startCounting() {
+  valueDisplays.forEach((valueDisplay) => {
+    // Nếu đã chạy rồi thì bỏ qua (tránh đếm lại khi scroll lên xuống)
+    if (valueDisplay.dataset.counted === "true") return;
 
-  let counter = setInterval(() => {
-    startValue += increment;
-    if (startValue >= endValue) {
-      startValue = endValue;
-      clearInterval(counter);
-    }
-    valueDisplay.textContent = startValue.toLocaleString();
-  }, stepTime);
-});
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let stepTime = Math.max(Math.floor(interval / endValue), 10);
+    let increment = Math.ceil(endValue / (interval / stepTime));
 
+    valueDisplay.dataset.counted = "true"; // đánh dấu đã đếm
+    let counter = setInterval(() => {
+      startValue += increment;
+      if (startValue >= endValue) {
+        startValue = endValue;
+        clearInterval(counter);
+      }
+      valueDisplay.textContent = startValue.toLocaleString();
+    }, stepTime);
+  });
+}
+
+// 🔹 Sử dụng Intersection Observer
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startCounting();
+        observer.disconnect(); // Ngắt luôn sau khi chạy lần đầu
+      }
+    });
+  },
+  {
+    threshold: 0.3, // chạy khi 30% phần tử hiện ra màn hình
+  }
+);
+
+// Quan sát phần container cha (hoặc 1 .section cụ thể)
+const section = document.querySelector(".counter-section") || valueDisplays[0]?.parentElement;
+if (section) observer.observe(section);
+
+
+// Scroll smoother
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".slider");
   const slides = document.querySelectorAll(".slider img");
@@ -39,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, 4000);
 });
-
 
 // Load up
 document.addEventListener("DOMContentLoaded", function () {
@@ -98,25 +127,25 @@ document.addEventListener("DOMContentLoaded", function () {
 // Nav bar here
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.getElementById('mainNav');
-  if (!navbar) return; // nếu ko có navbar thì dừng
+  if (!navbar) return; // Nếu không có navbar thì dừng
 
   const toggler = document.querySelector('.navbar-toggler');
   const collapse = document.getElementById('navbarSupportedContent');
 
-  // đảm bảo trạng thái ban đầu visible
+  // Đảm bảo trạng thái ban đầu là visible
   navbar.classList.remove('hide');
   navbar.classList.add('show');
 
   let lastScrollY = window.scrollY || 0;
 
-  // helper: chỉ ẩn navbar trên desktop (>= lg)
+  // Helper: chỉ ẩn navbar trên desktop (>= lg)
   function isDesktop() {
-    return window.innerWidth >= 992; // tương ứng bootstrap lg
+    return window.innerWidth >= 992; // Tương ứng breakpoint Bootstrap lg
   }
 
-  // xử lý scroll
+  // Xử lý khi cuộn trang
   function onScroll() {
-    // nếu mobile - giữ luôn hiện 
+    // Nếu là mobile → luôn hiện
     if (!isDesktop()) {
       navbar.classList.remove('hide');
       navbar.classList.add('show');
@@ -124,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // nếu collapse đang mở thì không ẩn
+    // Nếu menu đang mở → không ẩn
     if (collapse && collapse.classList.contains('show')) {
       lastScrollY = window.scrollY;
       return;
@@ -133,9 +162,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const current = window.scrollY || 0;
 
     if (current > lastScrollY && current > 80) {
+      // Cuộn xuống → ẩn navbar
       navbar.classList.remove('show');
       navbar.classList.add('hide');
     } else {
+      // Cuộn lên → hiện navbar
       navbar.classList.remove('hide');
       navbar.classList.add('show');
     }
@@ -145,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // khi click hamburger: ép hiện nav (an toàn nếu toggler không tồn tại)
+  // Khi click nút hamburger → ép hiện navbar
   if (toggler) {
     toggler.addEventListener('click', function () {
       navbar.classList.remove('hide');
@@ -153,20 +184,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // dùng Bootstrap collapse, lắng nghe sự kiện để tắt bật logic khi menu mở/đóng
+  // Xử lý trạng thái collapse (Bootstrap)
   if (collapse) {
-    // Khi menu mobile mở, navbar hiện
+    // Khi menu mobile mở → luôn hiện navbar
     collapse.addEventListener('shown.bs.collapse', function () {
       navbar.classList.remove('hide');
       navbar.classList.add('show');
     });
-    // Khi đóng -> cập nhật lastScrollY để tránh nhảy
+
+    // Khi menu đóng → cập nhật lại vị trí cuộn
     collapse.addEventListener('hidden.bs.collapse', function () {
       lastScrollY = window.scrollY || 0;
     });
   }
 
-  // Khi resize: nếu chuyển qua mobile thì hiện navbar; update lastScrollY
+  // Khi resize → nếu chuyển sang mobile thì hiện navbar
   window.addEventListener('resize', function () {
     if (!isDesktop()) {
       navbar.classList.remove('hide');
@@ -175,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
     lastScrollY = window.scrollY || 0;
   });
 });
+
 
 // Timeline js
 document.addEventListener("DOMContentLoaded", function () {
@@ -195,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 //terminal 
 document.querySelectorAll(".terminal-section").forEach(section => {
   const toggleBtn = section.querySelector(".toggle-btn");
@@ -210,7 +242,6 @@ document.querySelectorAll(".terminal-section").forEach(section => {
     if (hr) hr.style.display = isOpen ? "none" : "block";
   });
 });
-
 
 // slider ne
 document.addEventListener('DOMContentLoaded', function() {
@@ -256,7 +287,38 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlide(current);
 });
 
+// Active nav
+ document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
 
+// Scroll down button
+document.getElementById("scrollDownBtn").addEventListener("click", function() {
+  const nextSection = document.querySelector(".hero-section").nextElementSibling;
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: "smooth" });
+  }
+});
 
+// Pop up email button
+document.getElementById("contactBtn").addEventListener("click", function () {
+  const popup = document.getElementById("emailPopup");
+  popup.style.display = popup.style.display === "block" ? "none" : "block";
+});
 
+// Pop up email button: Click ra ngoài để ẩn popup
+document.addEventListener("click", function (e) {
+  const popup = document.getElementById("emailPopup");
+  const btn = document.getElementById("contactBtn");
+  if (!popup.contains(e.target) && !btn.contains(e.target)) {
+    popup.style.display = "none";
+  }
+});

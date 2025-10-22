@@ -13,10 +13,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!--Font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column">
     <main class="flex-shrink-0">
+        <!-- Nút email góc trái -->
+        <div class="contact-btn" id="contactBtn">
+            <i class="bi bi-envelope-fill"></i>
+        </div>
+
+        <!-- Popup hiển thị email -->
+        <div class="email-popup" id="emailPopup">
+            <div class="popup-arrow"></div>
+            <p>📧 Liên hệ: <a href="mailto:info@gocongport.vn">info@gocongport.vn</a></p>
+        </div>
+
+        <!-- Topbar -->
+        <div class="topbar bg-white text-dark py-2 border-bottom">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center px-3">
+
+                <!-- Bên trái: Thông tin liên hệ -->
+                <div
+                    class="contact-info d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-md-start">
+                    <span><i class="bi bi-telephone-fill me-1"></i> 0901 180 099</span>
+                    <span class="d-none d-sm-inline">|</span>
+                    <span><i class="bi bi-envelope-fill me-1"></i> info@gocongport.vn</span>
+                </div>
+
+                <!-- Bên phải: Nút ngôn ngữ -->
+                <div class="lang-switch d-flex align-items-center mt-2 mt-md-0">
+                    <button class="btn btn-sm btn-outline-dark me-2 active">VN</button>
+                    <button class="btn btn-sm btn-outline-dark">EN</button>
+                </div>
+            </div>
+        </div>
 
         <!-- Navigation done!-->
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,8 +63,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Thông tin cảng</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="port-geo-size.html"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Thông tin cảng</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                                 <li><a class="dropdown-item" href="port-geo-info.html">Vị trí địa lý</a></li>
                                 <li><a class="dropdown-item" href="port-geo-size.html">Quy mô dự án</a></li>
@@ -39,13 +73,18 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="port-subdivition.html" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Phân khu cảng</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio"
+                                href="port-subdivition.html" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Phân khu cảng</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                <li><a class="dropdown-item" href="port-subdivition.html#section1">Khu bên cảng và bãi container</a></li>
-                                <li><a class="dropdown-item" href="port-subdivition.html#section2">Khu dịch vụ logistics</a></li>
-                                <li><a class="dropdown-item" href="port-subdivition.html#section3">Khu công nghiệp công nghệ cao</a></li>
-                                <li><a class="dropdown-item" href="port-subdivition.html#section4">Khu thương mại dịch vụ</a></li>
+                                <li><a class="dropdown-item" href="port-subdivition.html#section1">Khu bên cảng và bãi
+                                        container</a></li>
+                                <li><a class="dropdown-item" href="port-subdivition.html#section2">Khu dịch vụ
+                                        logistics</a></li>
+                                <li><a class="dropdown-item" href="port-subdivition.html#section3">Khu công nghiệp công
+                                        nghệ cao</a></li>
+                                <li><a class="dropdown-item" href="port-subdivition.html#section4">Khu thương mại dịch
+                                        vụ</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="team.html">Đơn vị đối tác</a></li>
@@ -60,7 +99,7 @@
         <!-- Hero banner -->
         <section class="hero-section text-start justify-content-start">
             <div class="hero-background">
-                <img src="../img/final.png" alt="Hạ tầng & Trang thiết bị" class="hero-image">
+                <img src="img/cargo-ship.jpg" alt="Hình ảnh tàu hàng lớn" class="hero-image">
                 <div class="hero-overlay"></div>
             </div>
 
@@ -72,18 +111,28 @@
             </div>
         </section>
 
+        <!-- Breadcrumb dưới hero banner -->
+        <nav class="breadcrumb-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li>Thông tin Cảng</li>
+                </ul>
+            </div>
+        </nav>
+
         <!-- Size section -->
         <section class="py-5">
             <div class="container px-5 my-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0"
-                            src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                            src="img/port-sunset.jpg" alt="..." /></div>
                     <div class="col-lg-6">
                         <h1>QUY MÔ DỰ ÁN</h1>
                         <p class="plan-desc">Dự án Cảng tổng hợp Gò Công được đầu tư với quy mô lớn, định hướng trở
                             thành trung tâm logistics chiến lược của khu vực Đồng bằng sông Cửu Long. Tổng vốn đầu tư dự
-                            kiến hơn 12.000 tỷ đồng, triển khai trên diện tích khoảng 200 ha, bao gồm hệ thống cầu cảng,
-                            bến container, bến hàng tổng hợp, khu kho bãi, và hạ tầng giao thông kết nối đồng bộ.
+                            kiến hơn 264 triệu USD, triển khai trên diện tích khoảng 390 HA, bao gồm hệ thống cầu cảng,
+                            bến container, bến hàng tổng hợp, khu kho bãi và hạ tầng giao thông kết nối đồng bộ.
                         </p>
                         <p class="plan-desc">
                             Với tiềm lực tài chính vững mạnh cùng kinh nghiệm trong lĩnh vực phát triển hạ tầng cảng
@@ -103,17 +152,19 @@
                     <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0"
                             src="../img/Project_subdivision.jpg" alt="Phân khu dự án" /></div>
                     <div class="col-lg-6">
-                        <h1 >LỘ TRÌNH ĐẦU TƯ</h1>
+                        <h1>LỘ TRÌNH ĐẦU TƯ</h1>
                         <p class="plan-desc">
                             <strong>Giai đoạn 1</strong> tập trung xây dựng 1.800m bến cập tàu cùng khu
                             dịch vụ hậu cần và logistics phía sau cầu tàu với quy mô khoảng 121ha.
                         </p>
                         <p class="plan-desc">
-                             <strong>Giai đoạn 2</strong> tiếp tục mở rộng thêm 1.200m bến cập tàu phía hạ lưu, kết hợp phát triển khu hậu
+                            <strong>Giai đoạn 2</strong> tiếp tục mở rộng thêm 1.200m bến cập tàu phía hạ lưu, kết hợp
+                            phát triển khu hậu
                             cần – logistics quy mô 89ha, hoàn thiện chuỗi dịch vụ cảng hiện đại.
                         </p>
                         <p class="plan-desc">
-                            <strong>Giai đoạn 3</strong> dự án đầu tư khu logistics chuyên biệt rộng khoảng 105ha, tạo trung tâm
+                            <strong>Giai đoạn 3</strong> dự án đầu tư khu logistics chuyên biệt rộng khoảng 105ha, tạo
+                            trung tâm
                             lưu thông hàng hóa quy mô vùng.
                         </p>
                         <p class="plan-desc">
@@ -129,15 +180,11 @@
         <!-- Timeline section-->
         <section class="section-history py-5">
             <div class="container">
-                <h1 class="text-center mb-5"> TIẾN ĐỘ DỰ ÁN</h1>
+                <h1 class="text-center mb-5">KẾ HOẠCH TRIỂN KHAI</h1>
 
                 <!-- Timeline -->
                 <div class="timeline">
-                    <div class="timeline-item active" data-year="2023">
-                        <div class="timeline-dot"></div>
-                        <h5>2023</h5>
-                    </div>
-                    <div class="timeline-item" data-year="2025">
+                    <div class="timeline-item active" data-year="2025">
                         <div class="timeline-dot"></div>
                         <h5>2025</h5>
                     </div>
@@ -149,32 +196,69 @@
                         <div class="timeline-dot"></div>
                         <h5>2030</h5>
                     </div>
+                    <div class="timeline-item" data-year="2031">
+                        <div class="timeline-dot"></div>
+                        <h5>Sau 2023</h5>
+                    </div>
                 </div>
 
                 <!-- Nội dung -->
                 <div class="timeline-content mt-4">
-                    <div class="timeline-panel active" id="year-2023">
-                        <p>Blalalalala</p>
-                        <p>Blalalalala</p>
+                    <!-- Giai đoạn 1 -->
+                    <div class="timeline-panel active" id="year-2025">
+                        <h4>Hoàn thiện thủ tục hồ sơ pháp lý</h4>
+                        <p>Giai đoạn 1 của dự án Cảng tổng hợp quốc tế Gò Công đã hoàn tất đầy đủ và đúng trình tự các
+                            thủ tục pháp lý theo quy định hiện hành, từ công tác lựa chọn nhà đầu tư đến việc cấp phép
+                            xây dựng.</p>
+                        <p>Nhà đầu tư được lựa chọn có hồ sơ pháp lý rõ ràng, năng lực thực hiện đã được kiểm chứng
+                            thông qua hồ sơ đấu thầu và các báo cáo tài chính, kỹ thuật.</p>
                     </div>
-                    <div class="timeline-panel" id="year-2025">
-                        <p>2010: Thực hiện dự án cảng biển đầu tiên.</p>
-                        <p>2012: Liên doanh quốc tế và ứng dụng công nghệ xây dựng hiện đại.</p>
-                    </div>
+
+                    <!-- Giai đoạn 2 -->
                     <div class="timeline-panel" id="year-2027">
-                        <p>2020: Tổng giá trị đầu tư đạt mốc 1 tỷ USD.</p>
-                        <p>2021: Khởi động dự án Cảng tổng hợp Gò Công – Tiền Giang.</p>
+                        <h4> Xây dựng & lắp đặt thiết bị</h4>
+                        <p>Giai đoạn xây dựng và lắp đặt thiết bị của dự án Cảng tổng hợp quốc tế Gò Công được triển
+                            khai theo đúng tiêu chuẩn kỹ thuật, quy chuẩn xây dựng Việt Nam và các quy định của Bộ Giao
+                            thông Vận tải, Bộ Xây dựng.</p>
+                        <p>Các hạng mục được thực hiện tuần tự, giám sát chặt chẽ, bảo đảm chất lượng, an toàn lao động
+                            và tiến độ thi công.</p>
                     </div>
+
+                    <!-- Giai đoạn 3 -->
                     <div class="timeline-panel" id="year-2030">
-                        <p>2025: Hoàn thành giai đoạn 1 và đưa vào vận hành thử nghiệm.</p>
-                        <p>2026 trở đi: Mở rộng đầu tư sang logistics và khu công nghiệp liên kết.</p>
+                        <h4>Vận hành</h4>
+                        <p>Vận hành dự án cảng tổng hợp quốc tế, đạt những chỉ tiêu, chỉ số tài chính phù hợp. Ứng dụng
+                            công nghệ cao, các tiêu chí ESG, phát triển bền vững.</p>
+                    </div>
+
+                    <!-- Giai đoạn 4 -->
+                    <div class="timeline-panel" id="year-2031">
+                        <h4>Mở rộng triển khai giai đoạn 2, 3</h4>
+                        <p>Mở rộng quy mô, số lượng cầu cảng, công suất của cảng, diện tích kho bãi, khu công nghiệp tại
+                            bãi theo nhu cầu thị trường và quy định của Nhà nước.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        <!-- Small contact form -->
+        <section class="cta-mini text-center text-white my-5">
+            <div class="cta-inner p-4 p-md-5 rounded-4">
+                <h3 class="fw-bold mb-3">
+                    Quý khách cần báo giá cho dịch vụ Cảng và logistics?
+                </h3>
+                <p class="mb-4">
+                    Cảng Quốc tế Gò Công luôn sẵn sàng tư vấn và cung cấp giải pháp Cảng biển và logistics tối ưu.
+                </p>
+                <a href="contact.html" class="btn btn-danger px-4 py-2 fw-semibold">
+                    Liên hệ <i class="bi bi-arrow-up-right ms-1"></i>
+                </a>
+            </div>
+        </section>
+
         <!-- Line break -->
-            <div class="section-divider-full">   </div>
+        <div class="section-divider-full"> </div>
 
         <!-- What's next -->
         <section class=" section-recommend">
@@ -193,9 +277,8 @@
                 <div class="row gx-5 gy-5">
                     <!-- Card 1 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <a href=""
-                            class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
-                            <img class="card-img-top" src="../img/final.png" alt="Giới thiệu" />
+                        <a href="" class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
+                            <img class="card-img-top" src="img/cgi_port.jpg" alt="Hình ảnh CGI cảng Gò Công" />
                             <div class="card-body p-4">
                                 <h5 class="card-title mb-3">Giới thiệu Phân khu cảng</h5>
                                 <p class="card-text mb-0">
@@ -222,11 +305,12 @@
                     <div class="col-12 col-md-6 col-lg-4">
                         <a href="port-geo-tech.html"
                             class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
-                            <img class="card-img-top" src="../img/final.png" alt="Tiện ích" />
+                            <img class="card-img-top" src="img/robot.jpg" alt="Robot tự động hóa" />
                             <div class="card-body p-4">
                                 <h5 class="card-title mb-3">Công nghệ vận hành</h5>
                                 <p class="card-text mb-0">
-                                    Cảng Gò Công được đầu tư đồng bộ với hạ tầng quy mô lớn và thiết bị hiện đại, sẵn sàng đáp ứng mọi nhu cầu khai thác hàng hóa.
+                                    Cảng Gò Công được đầu tư đồng bộ với hạ tầng quy mô lớn và thiết bị hiện đại, sẵn
+                                    sàng đáp ứng mọi nhu cầu khai thác hàng hóa.
                                 </p>
                             </div>
                         </a>
@@ -237,7 +321,7 @@
 
     </main>
     <!-- Footer-->
-     <footer class="bg-dark py-4 mt-auto">
+    <footer class="bg-dark py-4 mt-auto">
         <h1 class="text-white text-center text-bolder mb-4">KHU KINH TẾ BIỂN GÒ CÔNG</h1>
 
         <div class="container px-4 px-md-5 px-5 my-5">

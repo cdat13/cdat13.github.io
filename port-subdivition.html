@@ -13,10 +13,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!--Font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
+        <!-- Nút email góc trái -->
+        <div class="contact-btn" id="contactBtn">
+            <i class="bi bi-envelope-fill"></i>
+        </div>
+
+        <!-- Popup hiển thị email -->
+        <div class="email-popup" id="emailPopup">
+            <div class="popup-arrow"></div>
+            <p>📧 Liên hệ: <a href="mailto:info@gocongport.vn">info@gocongport.vn</a></p>
+        </div>
+
+        <!-- Topbar -->
+        <div class="topbar bg-white text-dark py-2 border-bottom">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center px-3">
+
+                <!-- Bên trái: Thông tin liên hệ -->
+                <div
+                    class="contact-info d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-md-start">
+                    <span><i class="bi bi-telephone-fill me-1"></i> 0901 180 099</span>
+                    <span class="d-none d-sm-inline">|</span>
+                    <span><i class="bi bi-envelope-fill me-1"></i> info@gocongport.vn</span>
+                </div>
+
+                <!-- Bên phải: Nút ngôn ngữ -->
+                <div class="lang-switch d-flex align-items-center mt-2 mt-md-0">
+                    <button class="btn btn-sm btn-outline-dark me-2 active">VN</button>
+                    <button class="btn btn-sm btn-outline-dark">EN</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Navigation-->
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
@@ -65,11 +100,21 @@
             </div>
 
             <div class="hero-textbox">
-                <h1 class="hero-title text-white text-bolder">CÔNG NGHỆ VẬN HÀNH</h1>
-                <p class="hero-subtitle">Đầu tư xây dựng cảng tổng hợp Gò Công – Tiền Giang</p>
+                <h1 class="hero-title text-white text-bolder">Phân khu cảng</h1>
+                <p class="hero-subtitle">Cảng xanh - Hiệu quả - Tối ưu thời gian khai thác</p>
                 <div class="hero-line"></div>
             </div>
         </section>
+
+        <!-- Breadcrumb dưới hero banner -->
+        <nav class="breadcrumb-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li>Phân khu cảng</li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- Page Content-->
         <section class="py-5">
@@ -77,16 +122,16 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
-                            <h1>TỔNG QUAN VỀ DỰ ÁN</h1>
-                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Ab similique, ducimus ut alias sit accusamus illum, asperiores deserunt dolorum
-                                quaerat qui! Ab, quisquam explicabo magni dolores unde beatae quam a.</p>
+                            <h1>TỔNG QUAN VỀ PHÂN KHU</h1>
+                            <p class="lead fw-normal text-muted mb-0">Phân khu cảng ứng dụng công nghệ hiện đại, sử dụng
+                                năng lượng xanh thân thiện môi trường, nâng cao năng suất bốc dỡ hàng hóa và tối ưu hóa
+                                thời gian ra vào bến, hướng đến hoạt động hiệu quả và bền vững.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-8"><img class="img-fluid rounded-3 mb-5"
-                            src="https://dummyimage.com/1300x700/343a40/6c757d" alt="..." /></div>
+                    <div class="col-8"><img class="img-fluid rounded-3 mb-5" src="img/4. LONGCITY4mat (2).png"
+                            alt="Long City" /></div>
                 </div>
 
             </div>
@@ -96,83 +141,87 @@
         <div class="section-divider-full"> </div>
 
         <!-- Section 1: Ảnh bên trái -->
-        <section  id="section1" class="history-section mb-3 ">
+        <section id="section1" class="history-section mb-3 ">
             <div class="history-wrapper">
                 <div class="history-image">
-                    <img src="../img/TG-port-map.jpg" alt="History 1">
+                    <img src="img/khu1.jpg" alt="Cảng 1">
                     <div class="corner-border"></div>
                 </div>
-                <div class="history-text" >
+                <div class="history-text">
                     <p>
-                        Bãi để Container, Container Yard, là một khu vực được dành riêng cho việc quản lý và lưu trữ container trong quá trình
-                        vận chuyển hàng hóa. Đây là nơi tập trung các container trước và sau khi được vận chuyển bằng tàu biển, xe tải.
+                        Bãi để Container, Container Yard, là một khu vực được dành riêng cho việc quản lý và lưu trữ
+                        container trong quá trình
+                        vận chuyển hàng hóa. Đây là nơi tập trung các container trước và sau khi được vận chuyển bằng
+                        tàu biển, xe tải.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Terminal 1 -->
-        <section class="terminal-section  ">
-            <div class="container ">
-                <h1 class="text-bolder text-center">Khu bến cảng &amp; Bãi container</h1>
-                <button class="btn btn-secondary toggle-btn ">Xem chi tiết ▾</button>
+        <section class="terminal-section">
+            <div class="container">
+                <h1 class="text-bolder text-center">Khu cảng và dịch vụ logistics</h1>
+                <button class="btn btn-secondary toggle-btn">Xem chi tiết ▾</button>
                 <hr class="hr3">
 
                 <div class="terminal-feature">
                     <div class="row-item">
-                        <div class="label">Inbound gate</div>
-                        <div class="value">Tyler Street</div>
+                        <div class="label">Giai đoạn</div>
+                        <div class="value">Giai đoạn 1</div>
                     </div>
 
                     <div class="row-item alt">
-                        <div class="label">Primary Cargo</div>
-                        <div class="value">Containers, Dimensional Cargo, General Cargo, Breakbulk</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Entrance Gates</div>
-                        <div class="value">Calcutta Street</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Terminal Area</div>
-                        <div class="value">272 Acres / 110 Hectares + 37 off dock acres</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Length of Ship Berth</div>
-                        <div class="value">4,400 ft / 1,165 m</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Container Cranes</div>
-                        <div class="value">Total: 13</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Crane Capabilities</div>
+                        <div class="label">Phân khu</div>
                         <div class="value">
-                            <strong>Gantry Cranes</strong><br>
-                            ZPMC Super Post Panamax – 3 units – Height: 148ft (45m), Outreach: 221ft (67.3m), Tonnage:
-                            65 LT<br><br>
-                            ZPMC Post Panamax – 2 units – Height: 114ft (35m), Outreach: 167ft (51m), Tonnage: 50 LT
+                            Khu cảng và dịch vụ logistics<br>
+                            Giai đoạn đầu tư: Giai đoạn 1 – 186 ha
                         </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Chức năng</div>
+                        <div class="value">
+                            <ul>
+                                <li>Bến cảng container, bến tổng hợp</li>
+                                <li>Kho, bãi container, bãi hàng</li>
+                                <li>Nhà vận hành</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row-item alt">
+                        <div class="label">Thời gian thực hiện</div>
+                        <div class="value">
+                            Hoàn thành thủ tục – Giấy phép: Quý IV/2025<br>
+                            Xây dựng: Quý I/2026 – Quý IV/2027 (2 năm)<br>
+                            Đưa vào khai thác: Quý I/2028<br>
+                            Triển khai giai đoạn 2: Quý I/2030
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Tổng mức đầu tư</div>
+                        <div class="value">Tổng mức đầu tư: 377,94 triệu đô</div>
                     </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Section 2: Ảnh bên phải -->
         <section id="section2" class="history-section reverse mb-3">
             <div class="history-wrapper">
                 <div class="history-image">
-                    <img src="../img/TG-port-map.jpg" alt="History 2">
+                    <img src="img/khu2.jpg" alt="Cảng 2">
                     <div class="corner-border"></div>
                 </div>
                 <div class="history-text">
                     <p>
-                        Khu dịch vụ hậu cần logistics, với vai trò là cầu nối kết nối cảng và khu công nghiệp. Ứng dụng công nghệ hiện đại, trí 
-                        tuệ nhân tạo trong quá trình vận hành, cũng như năng lượng xanh, đáp ứng nhu cầu về nền kinh tế xanh, phát triển của
+                        Khu dịch vụ hậu cần logistics, với vai trò là cầu nối kết nối cảng và khu công nghiệp. Ứng dụng
+                        công nghệ hiện đại, trí
+                        tuệ nhân tạo trong quá trình vận hành, cũng như năng lượng xanh, đáp ứng nhu cầu về nền kinh tế
+                        xanh, phát triển của
                         khu vực và toàn thế giới.
                     </p>
                 </div>
@@ -182,66 +231,83 @@
         <!-- Terminal 2 -->
         <section class="terminal-section">
             <div class="container">
-                <h1 class="text-bolder text-center">Khu dịch vụ logistics</h1>
-
-                <button class="btn btn-secondary toggle-btn ">Xem chi tiết ▾</button>
+                <h1 class="text-bolder text-center">Khu cảng và dịch vụ logistics</h1>
+                <button class="btn btn-secondary toggle-btn">Xem chi tiết ▾</button>
                 <hr class="hr3">
-
 
                 <div class="terminal-feature">
                     <div class="row-item">
-                        <div class="label">Inbound gate</div>
-                        <div class="value">Tyler Street</div>
+                        <div class="label">Giai đoạn đầu tư</div>
+                        <div class="value">Giai đoạn 2 – 77 ha</div>
                     </div>
 
                     <div class="row-item alt">
-                        <div class="label">Primary Cargo</div>
-                        <div class="value">Containers, Dimensional Cargo, General Cargo, Breakbulk</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Entrance Gates</div>
-                        <div class="value">Calcutta Street</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Terminal Area</div>
-                        <div class="value">272 Acres / 110 Hectares + 37 off dock acres</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Length of Ship Berth</div>
-                        <div class="value">4,400 ft / 1,165 m</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Container Cranes</div>
-                        <div class="value">Total: 13</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Crane Capabilities</div>
+                        <div class="label">Chức năng</div>
                         <div class="value">
-                            <strong>Gantry Cranes</strong><br>
-                            ZPMC Super Post Panamax – 3 units – Height: 148ft (45m), Outreach: 221ft (67.3m), Tonnage:
-                            65 LT<br><br>
-                            ZPMC Post Panamax – 2 units – Height: 114ft (35m), Outreach: 167ft (51m), Tonnage: 50 LT
+                            <ul>
+                                <li>Bến cảng</li>
+                                <li>Bãi container</li>
+                                <li>Kho và bãi hàng</li>
+                                <li>Nhà ở chuyên viên, nhà vận hành</li>
+                            </ul>
                         </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Chi phí xây dựng</div>
+                        <div class="value">
+                            <strong>A. Chi phí xây dựng:</strong> 5,283,205,967,599 VNĐ<br>
+                            <em>I. Công trình thủy công:</em> 4,819,366,508,000 VNĐ<br>
+                            <em>II. Hạ tầng kỹ thuật:</em> 354,900,599,424 VNĐ<br>
+                            <em>III. Công trình kiến trúc:</em> 108,938,860,175 VNĐ
+                        </div>
+                    </div>
+
+                    <div class="row-item alt">
+                        <div class="label">Chi phí thiết bị</div>
+                        <div class="value">
+                            <strong>B. Chi phí thiết bị:</strong> 3,372,508,444,320 VNĐ<br>
+                            <em>I. Thiết bị hạ tầng kỹ thuật:</em> 34,190,968,320 VNĐ<br>
+                            <em>II. Thiết bị công trình kiến trúc:</em> 2,467,476,000 VNĐ<br>
+                            <em>III. Thiết bị khu cảng:</em> 3,335,850,000,000 VNĐ
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Tổng chi phí xây dựng và thiết bị</div>
+                        <div class="value">8,655,714,411,919 VNĐ</div>
+                    </div>
+
+                    <div class="row-item alt">
+                        <div class="label">Thời gian thực hiện</div>
+                        <div class="value">
+                            Hoàn thành thủ tục – Giấy phép: Quý IV/2025<br>
+                            Xây dựng: Quý I/2030 – Quý IV/2031 (2 năm)<br>
+                            Đưa vào khai thác: Quý I/2032 (Giai đoạn 3)<br>
+                            Mở rộng giai đoạn 3 – 90 ha: Quý I/2032
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Tổng mức đầu tư</div>
+                        <div class="value">423,07 triệu USD</div>
                     </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Section 3: Ảnh bên trái -->
         <section id="section3" class="history-section mb-3">
             <div class="history-wrapper">
                 <div class="history-image">
-                    <img src="../img/TG-port-map.jpg" alt="History 1">
+                    <img src="img/khu3.jpg" alt="Cảng 3">
                     <div class="corner-border"></div>
                 </div>
                 <div class="history-text">
                     <p>
-                        Khu công nghiệp công nghệ cao, ứng dụng trí tuệ nhân tạo, công nghệ xanh, đáp ứng nhu cầu phát triển bền vững của quốc gia
+                        Khu công nghiệp công nghệ cao, ứng dụng trí tuệ nhân tạo, công nghệ xanh, đáp ứng nhu cầu phát
+                        triển bền vững của quốc gia
                         và thế giới. Bên cạnh đó, nâng cao năng suất làm việc, tạo ra nhiều cơ hội việc làm cho khu vực.
                     </p>
                 </div>
@@ -251,49 +317,53 @@
         <!-- Terminal 3 -->
         <section class="terminal-section">
             <div class="container">
-                <h1 class="text-bolder text-center">Khu công nghiệp công nghệ cao</h1>
+                <h1 class="text-bolder text-center">Khu hậu cần ngoại vi</h1>
 
-                <button class="btn btn-secondary toggle-btn ">Xem chi tiết ▾</button>
+                <button class="btn btn-secondary toggle-btn">Xem chi tiết ▾</button>
                 <hr class="hr3">
 
                 <div class="terminal-feature">
                     <div class="row-item">
-                        <div class="label">Inbound gate</div>
-                        <div class="value">Tyler Street</div>
+                        <div class="label">Chức năng</div>
+                        <div class="value">Dịch vụ hậu cần logistics, lưu trữ, đóng gói hàng hóa</div>
                     </div>
 
                     <div class="row-item alt">
-                        <div class="label">Primary Cargo</div>
-                        <div class="value">Containers, Dimensional Cargo, General Cargo, Breakbulk</div>
+                        <div class="label">Tổng mức đầu tư</div>
+                        <div class="value">19,71 triệu USD</div>
                     </div>
 
                     <div class="row-item">
-                        <div class="label">Entrance Gates</div>
-                        <div class="value">Calcutta Street</div>
+                        <div class="label">Quy mô</div>
+                        <div class="value">39 ha (Giai đoạn 3)</div>
                     </div>
 
                     <div class="row-item alt">
-                        <div class="label">Terminal Area</div>
-                        <div class="value">272 Acres / 110 Hectares + 37 off dock acres</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Length of Ship Berth</div>
-                        <div class="value">4,400 ft / 1,165 m</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Container Cranes</div>
-                        <div class="value">Total: 13</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Crane Capabilities</div>
+                        <div class="label">Giai đoạn đầu tư</div>
                         <div class="value">
-                            <strong>Gantry Cranes</strong><br>
-                            ZPMC Super Post Panamax – 3 units – Height: 148ft (45m), Outreach: 221ft (67.3m), Tonnage:
-                            65 LT<br><br>
-                            ZPMC Post Panamax – 2 units – Height: 114ft (35m), Outreach: 167ft (51m), Tonnage: 50 LT
+                            Hoàn thành thủ tục: Quý IV/2025<br>
+                            Xây dựng: Quý I/2030 – Quý IV/2032 (2 năm)<br>
+                            Đưa vào khai thác: Quý I/2033
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Tổng chi phí xây dựng & thiết bị</div>
+                        <div class="value">404.730.030.400 VNĐ</div>
+                    </div>
+
+                    <div class="row-item alt">
+                        <div class="label">Chi phí xây dựng</div>
+                        <div class="value">179.661.518.400 VNĐ (hạ tầng kỹ thuật)</div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Chi phí thiết bị</div>
+                        <div class="value">
+                            Tổng: 225.068.512.000 VNĐ<br>
+                            Trong đó:<br>
+                            - Thiết bị hạ tầng kỹ thuật: 17.308.512.000 VNĐ<br>
+                            - Thiết bị khu cảng: 207.760.000.000 VNĐ
                         </div>
                     </div>
                 </div>
@@ -304,12 +374,13 @@
         <section id="section4" class="history-section reverse mb-3">
             <div class="history-wrapper">
                 <div class="history-image">
-                    <img src="../img/TG-port-map.jpg" alt="History 2">
+                    <img src="img/khu4.jpg" alt="Cảng 4">
                     <div class="corner-border"></div>
                 </div>
                 <div class="history-text">
                     <p>
-                        Khu thương mại lưu trú của chuyên gia, cán bộ công nhân viên, đầy đủ các chức năng thương mại lưu trú. Với biểu trường
+                        Khu thương mại lưu trú của chuyên gia, cán bộ công nhân viên, đầy đủ các chức năng thương mại
+                        lưu trú. Với biểu trường
                         hình tượng Rồng tạo điểm nhấn thu hút khách du lịch trong và ngoài nước.
                     </p>
                 </div>
@@ -317,51 +388,62 @@
         </section>
 
         <!-- Terminal 4 -->
-        <section class="terminal-section ">
+        <section class="terminal-section">
             <div class="container">
-                <h1 class="text-bolder text-center">Khu thương mại dịch vụ Cảng Gò Công</h1>
+                <h1 class="text-bolder text-center">Cảng hành khách và dịch vụ ngoại vi</h1>
+
                 <button class="btn btn-secondary toggle-btn">Xem chi tiết ▾</button>
                 <hr class="hr3">
 
-
                 <div class="terminal-feature">
                     <div class="row-item">
-                        <div class="label">Inbound gate</div>
-                        <div class="value">Tyler Street</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Primary Cargo</div>
-                        <div class="value">Containers, Dimensional Cargo, General Cargo, Breakbulk</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Entrance Gates</div>
-                        <div class="value">Calcutta Street</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Terminal Area</div>
-                        <div class="value">272 Acres / 110 Hectares + 37 off dock acres</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Length of Ship Berth</div>
-                        <div class="value">4,400 ft / 1,165 m</div>
-                    </div>
-
-                    <div class="row-item alt">
-                        <div class="label">Container Cranes</div>
-                        <div class="value">Total: 13</div>
-                    </div>
-
-                    <div class="row-item">
-                        <div class="label">Crane Capabilities</div>
+                        <div class="label">Chức năng</div>
                         <div class="value">
-                            <strong>Gantry Cranes</strong><br>
-                            ZPMC Super Post Panamax – 3 units – Height: 148ft (45m), Outreach: 221ft (67.3m), Tonnage:
-                            65 LT<br><br>
-                            ZPMC Post Panamax – 2 units – Height: 114ft (35m), Outreach: 167ft (51m), Tonnage: 50 LT
+                            Bến tàu khách nội địa và quốc tế, bến du thuyền, công viên giải trí, khu nhà ở chuyên gia và
+                            dịch vụ hậu cần ngoại vi.
+                        </div>
+                    </div>
+
+                    <div class="row-item alt">
+                        <div class="label">Tổng mức đầu tư</div>
+                        <div class="value">108,7 triệu USD (tương đương 2.310.146.331.531 VNĐ)</div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Quy mô</div>
+                        <div class="value">72,9 ha (Giai đoạn 3)</div>
+                    </div>
+
+                    <div class="row-item alt">
+                        <div class="label">Giai đoạn đầu tư</div>
+                        <div class="value">
+                            Hoàn thành thủ tục: Quý IV/2025<br>
+                            Xây dựng: Quý I/2030 – Quý IV/2031<br>
+                            Đưa vào khai thác: Quý I/2034
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Tổng chi phí xây dựng & thiết bị</div>
+                        <div class="value">2.310.146.331.531 VNĐ</div>
+                    </div>
+
+                    <div class="row-item alt">
+                        <div class="label">Chi phí xây dựng</div>
+                        <div class="value">
+                            Tổng: 2.070.032.728.331 VNĐ<br>
+                            - Công trình thủy công: 1.586.616.351.000 VNĐ<br>
+                            - Hạ tầng kỹ thuật: 479.567.977.331 VNĐ<br>
+                            - Công trình kiến trúc: 3.848.400.000 VNĐ
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="label">Chi phí thiết bị</div>
+                        <div class="value">
+                            Tổng: 240.113.603.200 VNĐ<br>
+                            - Thiết bị hạ tầng kỹ thuật: 32.353.603.200 VNĐ<br>
+                            - Thiết bị khu cảng: 207.760.000.000 VNĐ
                         </div>
                     </div>
                 </div>
@@ -370,8 +452,29 @@
 
     </main>
 
+    <!-- Contact form -->
+    <section class="footer-cta text-white mx-auto">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Text -->
+                <div class="col-md-8 text-md-start text-center">
+                    <p class="small mb-2">NHẬN PHẢN HỒI NHANH TỪ ĐỘI NGŨ CHÚNG TÔI</p>
+                    <h2 class="fw-bold mb-0">HÃY LIÊN HỆ VỚI CHÚNG TÔI NGAY HÔM NAY</h2>
+                </div>
+
+                <!-- Button -->
+                <div class="col-md-4 text-md-end text-center mt-4 mt-md-0">
+                    <a href="contact.html" class="btn btn-light btn-lg fw-semibold explore-btn">
+                        LIÊN HỆ NGAY
+                        <i class="bi bi-arrow-right-short ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer-->
-     <footer class="bg-dark py-4 mt-auto">
+    <footer class="bg-dark py-4 mt-auto">
         <h1 class="text-white text-center text-bolder mb-4">KHU KINH TẾ BIỂN GÒ CÔNG</h1>
 
         <div class="container px-4 px-md-5 px-5 my-5">

@@ -13,10 +13,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!--Font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column">
     <main class="flex-shrink-0">
+        <!-- Topbar -->
+        <div class="topbar bg-white text-dark py-2 border-bottom">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center px-3">
+
+                <!-- Bên trái: Thông tin liên hệ -->
+                <div
+                    class="contact-info d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-md-start">
+                    <span><i class="bi bi-telephone-fill me-1"></i> 0901 180 099</span>
+                    <span class="d-none d-sm-inline">|</span>
+                    <span><i class="bi bi-envelope-fill me-1"></i> info@gocongport.vn</span>
+                </div>
+
+                <!-- Bên phải: Nút ngôn ngữ -->
+                <div class="lang-switch d-flex align-items-center mt-2 mt-md-0">
+                    <button class="btn btn-sm btn-outline-dark me-2 active">VN</button>
+                    <button class="btn btn-sm btn-outline-dark">EN</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Navigation-->
           <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
@@ -28,7 +52,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="port-geo-info.html" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Thông tin cảng</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                                 <li><a class="dropdown-item" href="port-geo-info.html">Vị trí địa lý</a></li>
@@ -65,7 +89,7 @@
         <section class="hero-section text-start justify-content-start">
             <div class="hero-background">
                 <div class="hero-overlay"></div>
-                <img src="../img/cargo_bg.jpg" alt="Các tòa nhà" class="hero-image" style="opacity: 50%;">
+                <img src="img/light-container.jpg" alt="Hình ảnh cảng" class="hero-image" style="opacity: 50%;">
 
             </div>
 
@@ -79,6 +103,16 @@
 
             </div>
         </section>
+
+        <!-- Breadcrumb dưới hero banner -->
+        <nav class="breadcrumb-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li>Liên hệ</li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- Page content-->
         <section class="py-5">
@@ -153,7 +187,7 @@
                                     <div class="text-center text-danger mb-3">Có lỗi xảy ra!</div>
                                 </div>
                                 <!-- Submit Button-->
-                                <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton"
+                                <div class="d-grid"><button class="btn btn-success btn-lg disabled" id="submitButton"
                                         type="submit">Gửi yêu cầu</button></div>
                             </form>
                         </div>
@@ -195,9 +229,8 @@
                 <div class="row gx-5 gy-5">
                     <!-- Card 1 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <a href=""
-                            class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
-                            <img class="card-img-top" src="../img/final.png" alt="Giới thiệu" />
+                        <a href="" class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
+                            <img class="card-img-top" src="img/cgi_port.jpg" alt="Hình ảnh CGI cảng Gò Công" />
                             <div class="card-body p-4">
                                 <h5 class="card-title mb-3">Giới thiệu Phân khu cảng</h5>
                                 <p class="card-text mb-0">
@@ -224,11 +257,12 @@
                     <div class="col-12 col-md-6 col-lg-4">
                         <a href="port-geo-tech.html"
                             class="card h-100 shadow border-0 text-decoration-none link-dark hover-card">
-                            <img class="card-img-top" src="../img/final.png" alt="Tiện ích" />
+                            <img class="card-img-top" src="img/robot.jpg" alt="Robot tự động hóa" />
                             <div class="card-body p-4">
                                 <h5 class="card-title mb-3">Công nghệ vận hành</h5>
                                 <p class="card-text mb-0">
-                                    Cảng Gò Công được đầu tư đồng bộ với hạ tầng quy mô lớn và thiết bị hiện đại, sẵn sàng đáp ứng mọi nhu cầu khai thác hàng hóa.
+                                    Cảng Gò Công được đầu tư đồng bộ với hạ tầng quy mô lớn và thiết bị hiện đại, sẵn
+                                    sàng đáp ứng mọi nhu cầu khai thác hàng hóa.
                                 </p>
                             </div>
                         </a>

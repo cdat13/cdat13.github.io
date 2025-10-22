@@ -24,6 +24,38 @@
 
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
+        <!-- Nút email góc trái -->
+        <div class="contact-btn" id="contactBtn">
+            <i class="bi bi-envelope-fill"></i>
+        </div>
+
+        <!-- Popup hiển thị email -->
+        <div class="email-popup" id="emailPopup">
+            <div class="popup-arrow"></div>
+            <p>📧 Liên hệ: <a href="mailto:info@gocongport.vn">info@gocongport.vn</a></p>
+        </div>
+
+        <!-- Topbar -->
+        <div class="topbar bg-white text-dark py-2 border-bottom">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center px-3">
+
+                <!-- Bên trái: Thông tin liên hệ -->
+                <div
+                    class="contact-info d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-md-start">
+                    <span><i class="bi bi-telephone-fill me-1"></i> 0901 180 099</span>
+                    <span class="d-none d-sm-inline">|</span>
+                    <span><i class="bi bi-envelope-fill me-1"></i> info@gocongport.vn</span>
+                </div>
+
+                <!-- Bên phải: Nút ngôn ngữ -->
+                <div class="lang-switch d-flex align-items-center mt-2 mt-md-0">
+                    <button class="btn btn-sm btn-outline-dark me-2 active">VN</button>
+                    <button class="btn btn-sm btn-outline-dark">EN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nav start here! -->
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand text-bolder" href="index.html">Cảng biển Gò Công</a>
@@ -67,13 +99,23 @@
             </div>
         </nav>
 
-        <!-- Header start here! -->
-        <header class="hero-header position-relative hero-section"> -->
+        <!-- Slider có thể dùng lại -->
+        <!-- <div class="slider-wrapper">
+            <div class="slider">
+                <img src="../img/container.jpg" alt="slide 1">
+                <img src="../img/final.png" alt="slide 2">
+                <img src="../img/map_GC.jpg" alt="slide 3">
+            </div>
+        </div> -->
+
+        <!-- Hero banner start here! -->
+        <header class="hero-header position-relative hero-section">
             <div class="slider-wrapper">
                 <div class="slider">
-                    <img src="../img/container.jpg" alt="slide 1">
-                    <img src="../img/final.png" alt="slide 2">
-                    <img src="../img/map_GC.jpg" alt="slide 3">
+                    <video autoplay loop muted playsinline>
+                        <source src="../img/Port-gif2.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
                 </div>
             </div>
             <div class="overlay"></div>
@@ -90,7 +132,7 @@
                                 Giang phục vụ khai thác cảng biển, dịch vụ container & logistics.
                             </p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-center justify-content-xl-start ">
-                                <a class="btn btn-secondary btn-lg px-4 me-sm-3" href="#features">
+                                <a class="btn btn-secondary btn-lg px-4 me-sm-3" href="port-geo-size.html">
                                     Xem chi tiết <i class="bi bi-arrow-right ms-2"></i>
                                 </a>
                             </div>
@@ -98,21 +140,22 @@
                     </div>
                 </div>
             </div>
+            <button class="scroll-down-btn" id="scrollDownBtn">
+                <i class="bi bi-chevron-down"></i>
+            </button>
         </header>
 
-        <!-- Features section start here!-->
+        <!-- Port intro start here! Done!-->
         <section class="py-5" id="features">
             <div class="container px-5 my-5">
                 <div class="row gx-5">
                     <div class="col-lg-5 mb-5 mb-lg-0">
+                        <h1 class="fs-6 text-muted">ĐẦU TƯ DỰ ÁN</h1>
                         <h1 class=" mb-3">KHU CẢNG TỔNG HỢP <br> GÒ CÔNG</h1>
                         <p class=" mb-3 ">Sở hữu vị trí chiến lược, tiếp giáp với cửa
                             sông Soài Rạp,
                             12 tỉnh ĐBSCL và biển Đông, thuận lợi kết nối vùng cảng Thị Vãi Cái Mép Vũng Tàu đặc
-                            biệt
-                            kết nối với <br> Cảng Cần
-                            Giờ
-                            đang triển khai các tuyến hàng hải quốc tế qua biển Đông.
+                            biệt kết nối với Cảng Cần Giờ đang triển khai các tuyến hàng hải quốc tế qua biển Đông.
                         </p>
                         <p class="mb-3 ">
                             Cụm được kì vọng kết nối giao thương hàng hóa giữa
@@ -126,20 +169,28 @@
                             nhiều thuận lợi cho việc vẩn chuyển hàng hóa xuất nhập khẩu tiết kiệm tối ưu về thời gian và
                             chi phí vận chuyển đem lại hiệu quả kinh tế cao nhất.
                         </p>
-                        <a class="btn btn-secondary btn-lg px-4 me-sm-3" href="#features">Xem chi tiết
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="port-geo-info.html">Xem chi tiết
                             <i class="bi bi-arrow-right" style="margin-left: 8px;"></i>
                         </a>
                     </div>
                     <div class="col-lg-7">
-                        <img class="img-fluid2 my-5" src="../img/map_GC.jpg" loading="lazy" decoding="async"
-                            alt="Ban do cang Go Cong" draggable="false">
+                        <img class="img-fluid2 my-5 rounded shadow-sm" src="../img/map_GC.jpg" loading="lazy"
+                            decoding="async" alt="Bản đồ cảng Gò Công" draggable="false">
+
                     </div>
+
                 </div>
             </div>
             </div>
         </section>
 
-        <section class="py-5 section-bg">
+        <!-- Auto number done! -->
+        <section class="py-5 section-bg position-relative">
+            <!-- Text overlay góc trái -->
+            <div class="stat-overlay-text">
+                “Cảng tổng hợp quy mô lớn, hiện đại bậc nhất khu vực Đồng bằng sông Cửu Long.”
+            </div>
+
             <div class="container px-5 my-5">
                 <div class="row gx-4 gy-4 text-center text-white fw-bold align-items-stretch equal-height">
 
@@ -199,25 +250,29 @@
             </div>
         </section>
 
-        <!-- Phan khu chuc nang start here! -->
+        <!-- Phan khu chuc nang text start here done! -->
         <section class="py-4">
             <div class="container px-4 mt-4">
                 <div class="row gx-5 align-items-center text-center text-lg-start">
 
-                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-                        <h1 class=" mb-0">PHÂN KHU CHỨC NĂNG</h1>
+                    <div class="col-12 col-lg-6 ">
+                        <h1 class="fs-6 text-muted">TỔNG THỂ DỰ ÁN</h1>
+                        <h1>PHÂN KHU CHỨC NĂNG</h1>
+                        <p class="text-muted">Việc phân khu cảng thành nhiều phần giúp tối ưu hóa công năng và quản lý
+                            hiệu quả hơn. Mỗi khu vực được thiết kế phục vụ một loại hàng hóa hoặc hoạt động cụ thể như
+                            container, hàng rời, nhiên liệu, hay logistics. Cách bố trí này giúp giảm ùn tắc, tăng năng
+                            suất khai thác, đảm bảo an toàn và thuận tiện cho việc điều phối vận hành toàn cảng.</p>
                     </div>
 
                     <div class="col-12 col-lg-6">
-                        <div class="d-grid gap-3 d-sm-flex justify-content-center justify-content-lg-end">
-                            <a class="btn btn-secondary btn-lg px-4" href="#features">
+                        <div class="d-grid gap-3 d-sm-flex justify-content-center justify-content-lg-start">
+                            <a class="btn btn-primary  px-4" href="port-subdivition.html">
                                 Xem chi tiết <i class="bi bi-arrow-right ms-2"></i>
                             </a>
                         </div>
                     </div>
 
                 </div>
-                <hr class="hr2 mt-5 hr-animate">
             </div>
         </section>
 
@@ -228,33 +283,37 @@
                     <div class="col-lg-8">
                         <div class="row gx-5 ">
                             <div class="col-lg-6 col-6 col-md-6">
-                                <a href="#features" class="link-animate d-flex flex-column align-items-center">
+                                <a href="port-subdivition.html#section1"
+                                    class="link-animate d-flex flex-column align-items-center">
                                     <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
                                         src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4">Khu bến cảng và bãi container</span>
+                                    <span class="mt-2 h4 fs-5">Khu bến cảng và bãi container</span>
                                 </a>
                             </div>
                             <div class="col-lg-6 col-6 col-md-6">
-                                <a href="#features" class="link-animate d-flex flex-column align-items-center">
+                                <a href="port-subdivition.html#section2"
+                                    class="link-animate d-flex flex-column align-items-center">
                                     <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
                                         src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4">Khu dịch vụ logistics</span>
+                                    <span class="mt-2 h4 fs-5">Khu dịch vụ logistics</span>
                                 </a>
                             </div>
                         </div>
                         <div class="row gx-5">
                             <div class="col-lg-6 mt-5 col-6 col-md-6">
-                                <a href="#features" class="link-animate d-flex flex-column align-items-center">
+                                <a href="port-subdivition.html#section3"
+                                    class="link-animate d-flex flex-column align-items-center">
                                     <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
                                         src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4">Khu công nghiệp công nghệ cao</span>
+                                    <span class="mt-2 h4 fs-5">Khu công nghiệp công nghệ cao</span>
                                 </a>
                             </div>
                             <div class="col-lg-6 mt-5 col-6 col-md-6">
-                                <a href="#features" class="link-animate d-flex flex-column align-items-center">
+                                <a href="port-subdivition.html#section4"
+                                    class="link-animate d-flex flex-column align-items-center">
                                     <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
                                         src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4">Khu thương mại dịch vụ</span>
+                                    <span class="mt-2 h4 fs-5">Khu thương mại dịch vụ</span>
                                 </a>
                             </div>
                         </div>
@@ -269,7 +328,7 @@
         </section>
 
         <!-- Img overlay background -->
-        <section class="section-plan text-center">
+        <!-- <section class="section-plan text-center">
             <div class="container px-5 ">
                 <div class="row container justify-content-center mb-4 content-wrapper">
                     <div class="col-lg-8">
@@ -287,21 +346,37 @@
             <div class="image-wrapper">
                 <img src="../img/final.png" alt="Sơ đồ quy hoạch cảng">
             </div>
+        </section> -->
+
+        <!-- Small contact form -->
+        <section class="cta-mini text-center text-white my-5">
+            <div class="cta-inner p-4 p-md-5 rounded-4">
+                <h3 class="fw-bold mb-3">
+                    Quý khách cần báo giá cho dịch vụ Cảng và logistics?
+                </h3>
+                <p class="mb-4">
+                    Cảng Quốc tế Gò Công luôn sẵn sàng tư vấn và cung cấp giải pháp Cảng biển và logistics tối ưu.
+                </p>
+                <a href="contact.html" class="btn btn-danger px-4 py-2 fw-semibold">
+                    Liên hệ <i class="bi bi-arrow-up-right ms-1"></i>
+                </a>
+            </div>
         </section>
 
+        <!-- Line break -->
+        <div class="section-divider-full"> </div>
 
         <!-- NEWS section start here!-->
-        <section class="py-5">
+        <section class="py-5 ">
             <div class="container px-5 mt-5  mb-5">
                 <div class="row gx-5">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6 ">
                         <h1 class="">TIN TỨC</h1>
-                        <hr class="hr2 hr-animate">
-                        <p class="lead fw-normal mb-5">Cập nhật thông tin mới nhất từ chúng tôi</p>
+                        <p class="lead fs-5 mb-5">Cập nhật thông tin mới nhất từ chúng tôi</p>
                     </div>
                     <div class="col-12 col-lg-6 mb-5">
-                        <div class="d-grid gap-3 d-sm-flex ">
-                            <a class="btn btn-secondary btn-lg px-4 me-sm-3" href="#features">Xem tất cả
+                        <div class="d-grid gap-3 d-sm-flex justify-content-lg-end ">
+                            <a class="btn btn-primary px-4 me-sm-3" href="news.html">Xem tất cả
                                 <i class="bi bi-arrow-right" style="margin-left: 8px;"></i>
                             </a>
                         </div>
@@ -310,18 +385,22 @@
                 <div class="row gx-5">
                     <div class="col mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+                            <img class="card-img-top" src="img/chu-tich.jpg"
+                                alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
                             <div class="card-body p-4">
-                                <a class="text-decoration-none link-dark stretched-link" href="#!">
-                                    <h5 class="card-title mb-3">Bài 1</h5>
+                                <a class="text-decoration-none link-dark stretched-link"
+                                    href="news-detail.html?id=xay-dung-nha-may-mien-nam">
+                                    <h5 class="card-title mb-3">Bên trong những sáng kiến ​​và nghề thủ công của những
+                                        người tiên phong trong phát triển bền vững</h5>
                                 </a>
-                                <p class="card-text mb-0">bla bla</p>
+                                <p class="card-text mb-0">Liên danh SaiGon Group được chấp thuận gia hạn nghiên cứu dự
+                                    án Cảng tổng hợp Gò Công Đông</p>
                             </div>
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <div class="small">
-                                            <div class="text-muted">8/10/2025</div>
+                                            <div class="text-muted">24/03/2024</div>
                                         </div>
                                     </div>
                                 </div>
@@ -330,18 +409,23 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="..." />
+                            <img class="card-img-top" src="img/chu-tich-3.jpg" alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
                             <div class="card-body p-4">
-                                <a class="text-decoration-none link-dark stretched-link" href="#!">
-                                    <h5 class="card-title mb-3">Bài 2</h5>
+                                <a class="text-decoration-none link-dark stretched-link"
+                                    href="news-detail.html?id=xay-dung-nha-may-mien-nam">
+                                    <h5 class="card-title mb-3">Trao đổi với đối tác đầu tư nước ngoài dự án Sea Start
+                                        Phú Quốc</h5>
                                 </a>
-                                <p class="card-text mb-0"> Bla bla</p>
+                                <p class="card-text mb-0"> Từ ngày 20/8 đến ngày 24/8/2019, tại trụ sở Văn phòng, Lãnh
+                                    đạo Công ty Cổ phần Đầu tư Xây dựng Sài Gòn và Lãnh đạo Công ty TNHH Sao Biển Phú
+                                    Quốc đã có buổi làm việc, trao đổi với các đối tác đầu tư nước ngoài để gọi vốn đầu
+                                    tư .</p>
                             </div>
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <div class="small">
-                                            <div class="text-muted">8/10/2025</div>
+                                            <div class="text-muted">25/08/2019</div>
                                         </div>
                                     </div>
                                 </div>
@@ -350,12 +434,16 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="https://dummyimage.com/600x350/6c757d/343a40" alt="..." />
+                            <img class="card-img-top" src="img/chu-tich-2.jpg" alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
                             <div class="card-body p-4">
-                                <a class="text-decoration-none link-dark stretched-link" href="#!">
-                                    <h5 class="card-title mb-3">Bài 3</h5>
+                                <a class="text-decoration-none link-dark stretched-link"
+                                    href="news-detail.html?id=xay-dung-nha-may-mien-nam">
+                                    <h5 class="card-title mb-3">LỄ ĐỘNG THỔ KHAI TRƯƠNG DỰ ÁN VÀNH ĐAI 3 – GÓI XL7</h5>
                                 </a>
-                                <p class="card-text mb-0">blabla</p>
+                                <p class="card-text mb-0">Đường Vành đai 3 là dự án đường cao tốc đô thị, giao thông
+                                    trọng điểm có ý nghĩa quan trong của cả Vùng kinh tế trọng điểm phía Nam, kết nối
+                                    hành lang đô thị, cụm cảng biển, đi qua địa phận 4 tỉnh thành Bình Dương, TP. Hồ Chí
+                                    Minh, Long An, Đồng Nai.</p>
                             </div>
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
@@ -409,9 +497,6 @@
 
             </div>
         </section>
-
-        <!-- Email-->
-
 
     </main>
 
