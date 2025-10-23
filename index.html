@@ -10,18 +10,16 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <!--Font-->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
-
 </head>
 
 <!-- Body start here! -->
-
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
         <!-- Nút email góc trái -->
@@ -32,7 +30,7 @@
         <!-- Popup hiển thị email -->
         <div class="email-popup" id="emailPopup">
             <div class="popup-arrow"></div>
-            <p>📧 Liên hệ: <a href="mailto:info@gocongport.vn">info@gocongport.vn</a></p>
+            <p>📧 Liên hệ:</p><a href="mailto:info@gocongport.vn">info@gocongport.vn</a>
         </div>
 
         <!-- Topbar -->
@@ -65,6 +63,7 @@
                         class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Thông tin cảng</a>
@@ -90,7 +89,6 @@
                                         vụ</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="team.html">Đơn vị đối tác</a></li>
                         <li class="nav-item"><a class="nav-link" href="news.html">Tin tức</a></li>
                         <li class="nav-item"><a class="nav-link" href="libery.html">Thư viện</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
@@ -133,7 +131,7 @@
                             </p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-center justify-content-xl-start ">
                                 <a class="btn btn-secondary btn-lg px-4 me-sm-3" href="port-geo-size.html">
-                                    Xem chi tiết <i class="bi bi-arrow-right ms-2"></i>
+                                    <i class="bi bi-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
@@ -146,24 +144,24 @@
         </header>
 
         <!-- Port intro start here! Done!-->
-        <section class="py-5" id="features">
+        <section class="py-5 mb-3" id="features">
             <div class="container px-5 my-5">
                 <div class="row gx-5">
                     <div class="col-lg-5 mb-5 mb-lg-0">
                         <h1 class="fs-6 text-muted">ĐẦU TƯ DỰ ÁN</h1>
                         <h1 class=" mb-3">KHU CẢNG TỔNG HỢP <br> GÒ CÔNG</h1>
-                        <p class=" mb-3 ">Sở hữu vị trí chiến lược, tiếp giáp với cửa
+                        <p class="plan-desc mb-3 ">Sở hữu vị trí chiến lược, tiếp giáp với cửa
                             sông Soài Rạp,
                             12 tỉnh ĐBSCL và biển Đông, thuận lợi kết nối vùng cảng Thị Vãi Cái Mép Vũng Tàu đặc
                             biệt kết nối với Cảng Cần Giờ đang triển khai các tuyến hàng hải quốc tế qua biển Đông.
                         </p>
-                        <p class="mb-3 ">
+                        <p class="plan-desc mb-3 ">
                             Cụm được kì vọng kết nối giao thương hàng hóa giữa
                             vùng kinh tế phía Nam, vùng ĐBSCL và các vùng lân cận. Cảng cung cấp dịch vụ container, bến
                             tổng hợp, bến hàng rời, bến hàng
                             lỏng/khí và bến khách, dịch vụ logistics và chuỗi cung ứng.
                         </p>
-                        <p class="mb-3 ">
+                        <p class="plan-desc mb-3 ">
                             Theo kế hoạch, sông Soài Rạp sẽ được nạo vét tới độ sâu 12m, khả năng đón tàu biển lớn
                             70.000 tấn trở lên sẽ tạo rất
                             nhiều thuận lợi cho việc vẩn chuyển hàng hóa xuất nhập khẩu tiết kiệm tối ưu về thời gian và
@@ -197,7 +195,7 @@
                     <div class="col-6 col-md-6 col-lg-3">
                         <div class="p-3 h-100 d-flex flex-column text-center stat-box">
                             <div class="stat-content">
-                                <span class="fs-6 fs-md-4 fs-lg-3">Quy mô</span>
+                                <span class="fs-6 fs-md-4 fs-lg-3">Quy mô đến</span>
                                 <div class="stat-line"></div>
                             </div>
                             <div class="stat-value">
@@ -250,25 +248,112 @@
             </div>
         </section>
 
+        <!-- Services section -->
+        <section class="service-section py-5">
+            <div class="container">
+                <div class="text-center mb-5 plan-desc">
+                    <h1 class="fw-bold text-white mb-3">DỊCH VỤ ĐẲNG CẤP THẾ GIỚI</h1>
+                    <p class="text-light mx-auto" style="max-width: 800px;">
+                        Đội ngũ chuyên gia bản địa và quốc tế làm việc với niềm đam mê phục vụ và
+                        <strong>lấy khách hàng làm trọng tâm</strong>.
+                        Chúng tôi luôn tìm hiểu, nắm bắt nhu cầu để khách hàng cảm thấy an tâm và
+                        thuận tiện trong quá trình vận chuyển hàng hóa.
+                    </p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/final.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-text">Khai thác Container</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/final.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-text">Hàng rời / Hàng tổng hợp</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/final.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-text">Kho bãi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/final.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-text">Thương mại dịch vụ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/final.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-text">Đại lý hàng hải</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/final.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-text">Dịch vụ hỗ trợ khác</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Phan khu chuc nang text start here done! -->
         <section class="py-4">
             <div class="container px-4 mt-4">
                 <div class="row gx-5 align-items-center text-center text-lg-start">
 
-                    <div class="col-12 col-lg-6 ">
+                    <div class="col-12 col-lg-6  ">
                         <h1 class="fs-6 text-muted">TỔNG THỂ DỰ ÁN</h1>
-                        <h1>PHÂN KHU CHỨC NĂNG</h1>
-                        <p class="text-muted">Việc phân khu cảng thành nhiều phần giúp tối ưu hóa công năng và quản lý
-                            hiệu quả hơn. Mỗi khu vực được thiết kế phục vụ một loại hàng hóa hoặc hoạt động cụ thể như
-                            container, hàng rời, nhiên liệu, hay logistics. Cách bố trí này giúp giảm ùn tắc, tăng năng
-                            suất khai thác, đảm bảo an toàn và thuận tiện cho việc điều phối vận hành toàn cảng.</p>
+                        <h1 class="mb-3">PHÂN KHU CHỨC NĂNG</h1>
+                        <a class="btn btn-primary mb-3 px-4" href="port-subdivition.html">
+                            Xem chi tiết <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
                     </div>
 
                     <div class="col-12 col-lg-6">
-                        <div class="d-grid gap-3 d-sm-flex justify-content-center justify-content-lg-start">
-                            <a class="btn btn-primary  px-4" href="port-subdivition.html">
-                                Xem chi tiết <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-center ">
+                            <p class="plan-desc text-muted">Việc phân khu cảng thành nhiều phần giúp tối ưu hóa công
+                                năng và quản lý
+                                hiệu quả hơn. Mỗi khu vực được thiết kế phục vụ một loại hàng hóa hoặc hoạt động cụ thể
+                                như
+                                container, hàng rời, nhiên liệu, hay logistics. Cách bố trí này giúp giảm ùn tắc, tăng
+                                năng
+                                suất khai thác, đảm bảo an toàn và thuận tiện cho việc điều phối vận hành toàn cảng.</p>
                         </div>
                     </div>
 
@@ -276,98 +361,49 @@
             </div>
         </section>
 
-        <!-- 4 khu chuc nang start here! -->
-        <section>
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-center text-center">
-                    <div class="col-lg-8">
-                        <div class="row gx-5 ">
-                            <div class="col-lg-6 col-6 col-md-6">
-                                <a href="port-subdivition.html#section1"
-                                    class="link-animate d-flex flex-column align-items-center">
-                                    <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
-                                        src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4 fs-5">Khu bến cảng và bãi container</span>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-6 col-md-6">
-                                <a href="port-subdivition.html#section2"
-                                    class="link-animate d-flex flex-column align-items-center">
-                                    <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
-                                        src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4 fs-5">Khu dịch vụ logistics</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row gx-5">
-                            <div class="col-lg-6 mt-5 col-6 col-md-6">
-                                <a href="port-subdivition.html#section3"
-                                    class="link-animate d-flex flex-column align-items-center">
-                                    <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
-                                        src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4 fs-5">Khu công nghiệp công nghệ cao</span>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 mt-5 col-6 col-md-6">
-                                <a href="port-subdivition.html#section4"
-                                    class="link-animate d-flex flex-column align-items-center">
-                                    <img decoding="async" class="img-fluid w-auto" style="max-width: 120px;"
-                                        src="../img/construction_icon.png" alt="Construction icon">
-                                    <span class="mt-2 h4 fs-5">Khu thương mại dịch vụ</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- img hover -->
+        <section class="hotspot-section">
+            <div class="hotspot-container">
+                <img src="img/sss.jpg" alt="Phân khu cảng" class="hotspot-image" />
 
-                    <div class=" col-lg-4">
-                        <img class=" img-fluid3 rounded-3" src="../img/mbtt_remove.png"
-                            alt="Mat bang tong the khu kinh te bien Go Cong">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Img overlay background -->
-        <!-- <section class="section-plan text-center">
-            <div class="container px-5 ">
-                <div class="row container justify-content-center mb-4 content-wrapper">
-                    <div class="col-lg-8">
-                        <h1 class="">QUY HOẠCH CẢNG</h1>
-                        <p class="plan-desc">
-                            Sở hữu vị trí thuận lợi, Cảng Gò Công được định hướng trở thành trung tâm logistics chiến
-                            lược,
-                            kết nối các vùng kinh tế trọng điểm và đóng vai trò quan trọng trong phát triển khu vực.
-                        </p>
-                    </div>
+                <!-- Các icon map -->
+                <div class="hotspot" style="top: 45%; left: 25%;" data-title="Khu A"
+                    data-desc="Khu thương mại dịch vụ.">
+                    <i class="bi bi-geo-alt-fill"></i>
                 </div>
 
+                <div class="hotspot" style="top: 50%; left: 60%;" data-title="Khu B"
+                    data-desc="Khu bến cảng và bãi container.">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+
+                <div class="hotspot" style="top: 62%; left: 85%;" data-title="Khu C"
+                    data-desc="Khu dịch vụ logistics.">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+
+                <div class="hotspot" style="top: 40%; left: 85%;" data-title="Khu D"
+                    data-desc="Khu công nghiệp công nghệ cao.">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
             </div>
 
-            <div class="image-wrapper">
-                <img src="../img/final.png" alt="Sơ đồ quy hoạch cảng">
-            </div>
-        </section> -->
-
-        <!-- Small contact form -->
-        <section class="cta-mini text-center text-white my-5">
-            <div class="cta-inner p-4 p-md-5 rounded-4">
-                <h3 class="fw-bold mb-3">
-                    Quý khách cần báo giá cho dịch vụ Cảng và logistics?
-                </h3>
-                <p class="mb-4">
-                    Cảng Quốc tế Gò Công luôn sẵn sàng tư vấn và cung cấp giải pháp Cảng biển và logistics tối ưu.
-                </p>
-                <a href="contact.html" class="btn btn-danger px-4 py-2 fw-semibold">
-                    Liên hệ <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
+            <!-- Lightbox -->
+            <div class="lightbox-main" id="lightbox">
+                <div class="lightbox-content-main">
+                    <span class="close" id="close-lightbox">&times;</span>
+                    <h2 id="lightbox-title"></h2>
+                    <p id="lightbox-desc"></p>
+                    <button class="btn btn-primary">Xem thêm</button>
+                </div>
             </div>
         </section>
 
         <!-- Line break -->
         <div class="section-divider-full"> </div>
 
-        <!-- NEWS section start here!-->
-        <section class="py-5 ">
+        <!-- NEWS section start here done!-->
+        <section class=" mt-2">
             <div class="container px-5 mt-5  mb-5">
                 <div class="row gx-5">
                     <div class="col-12 col-lg-6 ">
@@ -383,7 +419,7 @@
                     </div>
                 </div>
                 <div class="row gx-5">
-                    <div class="col mb-5">
+                    <div class="col mb-5 news-card">
                         <div class="card h-100 shadow border-0">
                             <img class="card-img-top" src="img/chu-tich.jpg"
                                 alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
@@ -394,7 +430,7 @@
                                         người tiên phong trong phát triển bền vững</h5>
                                 </a>
                                 <p class="card-text mb-0">Liên danh SaiGon Group được chấp thuận gia hạn nghiên cứu dự
-                                    án Cảng tổng hợp Gò Công Đông</p>
+                                    án Cảng tổng hợp Gò Công Đông.</p>
                             </div>
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
@@ -407,9 +443,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
+                    <div class="col mb-5 news-card">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/chu-tich-3.jpg" alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
+                            <img class="card-img-top" src="img/chu-tich-3.jpg"
+                                alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
                             <div class="card-body p-4">
                                 <a class="text-decoration-none link-dark stretched-link"
                                     href="news-detail.html?id=xay-dung-nha-may-mien-nam">
@@ -419,7 +456,7 @@
                                 <p class="card-text mb-0"> Từ ngày 20/8 đến ngày 24/8/2019, tại trụ sở Văn phòng, Lãnh
                                     đạo Công ty Cổ phần Đầu tư Xây dựng Sài Gòn và Lãnh đạo Công ty TNHH Sao Biển Phú
                                     Quốc đã có buổi làm việc, trao đổi với các đối tác đầu tư nước ngoài để gọi vốn đầu
-                                    tư .</p>
+                                    tư.</p>
                             </div>
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
@@ -432,9 +469,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
+                    <div class="col mb-5 news-card">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/chu-tich-2.jpg" alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
+                            <img class="card-img-top" src="img/chu-tich-2.jpg"
+                                alt="Chủ tịch hội đồng quản trị Nguyễn Thành Lâm" />
                             <div class="card-body p-4">
                                 <a class="text-decoration-none link-dark stretched-link"
                                     href="news-detail.html?id=xay-dung-nha-may-mien-nam">
@@ -460,39 +498,24 @@
             </div>
         </section>
 
-        <!-- Team members section-->
+        <!-- Invest logo section-->
         <section class="py-5 bg-light">
             <div class="container px-4">
-
-                <!-- Tiêu đề -->
                 <div class="text-center mb-5">
-                    <h1>ĐƠN VỊ ĐẦU TƯ</h1>
+                    <h1>ĐƠN VỊ ĐỒNG HÀNH</h1>
                 </div>
-
-                <!-- Logo -->
-                <div class="row gx-4 gy-4 justify-content-center align-items-center text-center">
-
-                    <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center">
-                        <div class="logo-box">
-                            <img class="invest-logo img-fluid px-3" src="../img/TOYO_logo2.webp"
-                                alt="TOYO Group Logo" />
-                        </div>
+                <div class="logo-slider">
+                    <div class="logo-track">
+                        <!-- Logo images start -->
+                        <img src="../img/TOYO_logo2.webp" alt="TOYO" />
+                        <img src="../img/gocong_logo.png" alt="Gò Công" />
+                        <img src="../img/saigongroup_logo.png" alt="Sài Gòn Group" />
+                        <img src="../img/scm_logo.jpg" alt="Đối tác 4" />
+                        <img src="../img/Logo_tỉnh_Tiền_Giang.svg.png" alt="Đối tác 5" />
+                        <img src="../img/portcoast_logo.png" alt="Đối tác 6" />
+                        <img src="/img/Logo-Vietcombank.webp" alt="Đối tác 7" />
+                        <img src="/img/bidv_logo.png" alt="Đối tác 8" />
                     </div>
-
-                    <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center">
-                        <div class="logo-box">
-                            <img class="invest-logo img-fluid px-3" src="../img/gocong_logo.png"
-                                alt="Gò Công Port Logo" />
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center">
-                        <div class="logo-box">
-                            <img class="invest-logo img-fluid px-3" src="../img/saigongroup_logo.png"
-                                alt="Sài Gòn Group Logo" />
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
@@ -500,56 +523,51 @@
 
     </main>
 
-    <!-- Footer-->
+    <!-- Footer done!-->
     <footer class="bg-dark py-4 mt-auto">
         <h1 class="text-white text-center text-bolder mb-4">KHU KINH TẾ BIỂN GÒ CÔNG</h1>
 
         <div class="container px-4 px-md-5 px-5 my-5">
             <div class="row gx-5 gy-4 justify-content-center">
-                <!-- Card about -->
-                <div class="col-md-6 col-12 col-lg-4 text-start">
-                    <div class="mb-5 mb-xl-0">
-                        <div class="p-5 text-white">
-                            <h3 class="fw-bold">SaiGon Group</h3>
-                            <ul class="list-unstyled small lh-lg text-white">
-                                <li><strong>Trụ sở chính:</strong> 229 Phạm Văn Đồng, P. Hạnh Thông, TP. HCM</li>
-                                <li><strong>Chi nhánh:</strong> 48-50-52 Nam Kỳ Khởi Nghĩa, P. Sài Gòn, TP. HCM</li>
-                                <li><strong>Mã số thuế:</strong> 0302669340</li>
-                                <li><strong>Hotline:</strong> 0901 180 099</li>
-                                <li><strong>Email:</strong> info@saigongroup.vn</li>
-                            </ul>
-                            <div class="d-grid mt-3">
-                                <a class="btn btn-secondary btn-sm px-4 me-sm-3" href="../img/HoSoDoanhNghiep.pdf"
-                                    download="HoSoDoanhNghiep.pdf">
-                                    Tải hồ sơ doanh nghiệp
-                                    <i class="bi bi-arrow-bar-down" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
+                <!-- Cột 1: Thông tin -->
+                <div class="col-md-6 col-12 col-lg-3 text-start">
+                    <div class="p-4 text-white">
+                        <h3 class="fw-bold">SaiGon Group</h3>
+                        <ul class="list-unstyled small lh-lg text-white">
+                            <li><strong>Trụ sở chính:</strong> 229 Phạm Văn Đồng, P. Hạnh Thông, TP. HCM</li>
+                            <li><strong>Chi nhánh:</strong> 48-50-52 Nam Kỳ Khởi Nghĩa, P. Sài Gòn, TP. HCM</li>
+                            <li><strong>Mã số thuế:</strong> 0302669340</li>
+                            <li><strong>Hotline:</strong> 0901 180 099</li>
+                            <li><strong>Email:</strong> info@saigongroup.vn</li>
+                        </ul>
+                        <div class="d-grid mt-3">
+                            <a class="btn btn-secondary btn-sm px-4 me-sm-3" href="../img/HoSoDoanhNghiep.pdf"
+                                download="HoSoDoanhNghiep.pdf">
+                                Tải hồ sơ doanh nghiệp
+                                <i class="bi bi-arrow-bar-down ms-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card address hide in mobile! -->
-                <div class="d-none d-lg-block col-lg-4">
-                    <div class="p-5 text-white">
+                <!-- Cột 2: Menu trái -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="p-4 text-white">
                         <ul class="list-unstyled mb-4 navbar-nav">
                             <li class="mb-2"><a href="port-geo-info.html" class="nav-link"><i
                                         class="bi bi-arrow-right-short text-primary"></i> Thông tin dự án</a></li>
-
                             <li class="mb-2"><a href="port-subdivition.html" class="nav-link"><i
                                         class="bi bi-arrow-right-short text-primary"></i> Phân khu cảng</a></li>
-
                             <li class="mb-2"><a href="team.html" class="nav-link"><i
                                         class="bi bi-arrow-right-short text-primary"></i> Đơn vị đối tác</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Card nav hide in mobile! -->
-                <div class=" col-lg-4 d-none d-lg-block">
-                    <div class="p-5 text-white">
+                <!-- Cột 3: Menu phải -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="p-4 text-white">
                         <ul class="list-unstyled mb-4 navbar-nav">
-
                             <li class="mb-2"><a href="news.html" class="nav-link"><i
                                         class="bi bi-arrow-right-short text-primary"></i> Tin tức</a></li>
                             <li class="mb-2"><a href="libery.html" class="nav-link"><i
@@ -558,13 +576,23 @@
                                         class="bi bi-arrow-right-short text-primary"></i> Liên hệ</a></li>
                         </ul>
                     </div>
-                    <div class="d-flex gap-3 ps-5">
+                    <div class="d-flex gap-3 ps-4">
                         <a href="https://www.facebook.com/saigongroup" target="_blank" class="social-btn fb-btn">
                             <i class="bi bi-facebook"></i>
                         </a>
                         <a href="https://zalo.me/0837137697" target="_blank" class="social-btn zalo-btn">
                             <img src="../img/Zalo_icon.webp" alt="Zalo" class="zalo-icon">
                         </a>
+                    </div>
+                </div>
+
+                <!-- Cột 4: Bản đồ (chỉ hiển thị trên desktop) -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="p-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.897203403897!2d106.6878737!3d10.819178299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e588f6bee1%3A0x56ff0fd650a573ba!2zVMOCzKNQIMSQT0HMgE4gxJDDgsyAVSBUxq8gWMOCWSBExq_Mo05HIFNBzIBJIEdPzIBOIC0gU0FJR09OIEdST1VQ!5e0!3m2!1svi!2s!4v1761204544336!5m2!1svi!2s"
+                            width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -591,6 +619,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="js/img-hover.js"></script>
+
 </body>
 
 </html>

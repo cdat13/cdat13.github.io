@@ -244,7 +244,7 @@ document.querySelectorAll(".terminal-section").forEach(section => {
 });
 
 // slider ne
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const slides = document.querySelectorAll('.blog-slide');
   const prevBtn = document.querySelector('.btn-slide.prev');
   const nextBtn = document.querySelector('.btn-slide.next');
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Tạo dots
   slides.forEach((slide, i) => {
     const dot = document.createElement('button');
-    if(i === 0) dot.classList.add('active');
+    if (i === 0) dot.classList.add('active');
     dot.addEventListener('click', () => {
       current = i;
       showSlide(current);
@@ -262,23 +262,23 @@ document.addEventListener('DOMContentLoaded', function() {
     dotsContainer.appendChild(dot);
   });
 
-  function showSlide(index){
-    slides.forEach((slide,i)=>{
-      slide.classList.toggle('active', i===index);
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
     });
     // update dots
     const dots = dotsContainer.querySelectorAll('button');
-    dots.forEach((dot,i)=> dot.classList.toggle('active', i===index));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
   }
 
   // Nút điều hướng (desktop)
-  if(prevBtn && nextBtn){
-    prevBtn.addEventListener('click', ()=>{
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
       current = (current === 0) ? slides.length - 1 : current - 1;
       showSlide(current);
     });
 
-    nextBtn.addEventListener('click', ()=>{
+    nextBtn.addEventListener('click', () => {
       current = (current === slides.length - 1) ? 0 : current + 1;
       showSlide(current);
     });
@@ -288,20 +288,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Active nav
- document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-    navLinks.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href === currentPage) {
-        link.classList.add("active");
-      }
-    });
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    }
   });
+});
 
 // Scroll down button
-document.getElementById("scrollDownBtn").addEventListener("click", function() {
+document.getElementById("scrollDownBtn").addEventListener("click", function () {
   const nextSection = document.querySelector(".hero-section").nextElementSibling;
   if (nextSection) {
     nextSection.scrollIntoView({ behavior: "smooth" });
@@ -321,4 +321,28 @@ document.addEventListener("click", function (e) {
   if (!popup.contains(e.target) && !btn.contains(e.target)) {
     popup.style.display = "none";
   }
+});
+
+
+// Invest logo
+const slider = document.querySelector(".logo-slider");
+
+const track = document.querySelector(".logo-track");
+const logos = Array.from(track.children);
+
+logos.forEach((logo) => {
+  const clone = logo.cloneNode(true);
+  track.appendChild(clone);
+});
+
+// Pause animation on hover
+slider.addEventListener("mouseover", function () {
+  document.querySelector(".logo-track").style.animationPlayState =
+    "paused";
+});
+
+// Resume animation when hover ends
+slider.addEventListener("mouseout", function () {
+  document.querySelector(".logo-track").style.animationPlayState =
+    "running";
 });
