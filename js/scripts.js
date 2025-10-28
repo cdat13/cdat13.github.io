@@ -127,39 +127,29 @@ document.addEventListener("DOMContentLoaded", function () {
 // Nav bar here
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.getElementById('mainNav');
-  if (!navbar) return; // Nếu không có navbar thì dừng
+  if (!navbar) return;
 
   const toggler = document.querySelector('.navbar-toggler');
   const collapse = document.getElementById('navbarSupportedContent');
 
-  // Đảm bảo trạng thái ban đầu là visible
-  navbar.classList.remove('hide');
+  // Hiển thị mặc định
   navbar.classList.add('show');
+  navbar.classList.remove('hide');
 
   let lastScrollY = window.scrollY || 0;
+  let ticking = false;
 
-  // Helper: chỉ ẩn navbar trên desktop (>= lg)
-  function isDesktop() {
-    return window.innerWidth >= 992; // Tương ứng breakpoint Bootstrap lg
-  }
-
-  // Xử lý khi cuộn trang
   function onScroll() {
-    // Nếu là mobile → luôn hiện
-    if (!isDesktop()) {
-      navbar.classList.remove('hide');
-      navbar.classList.add('show');
-      lastScrollY = window.scrollY;
-      return;
-    }
-
-    // Nếu menu đang mở → không ẩn
-    if (collapse && collapse.classList.contains('show')) {
-      lastScrollY = window.scrollY;
-      return;
-    }
-
     const current = window.scrollY || 0;
+
+    // Không xử lý nếu đang cuộn rất ít
+    if (Math.abs(current - lastScrollY) < 5) return;
+
+    // Nếu menu đang mở (mobile) → không ẩn
+    if (collapse && collapse.classList.contains('show')) {
+      lastScrollY = current;
+      return;
+    }
 
     if (current > lastScrollY && current > 80) {
       // Cuộn xuống → ẩn navbar
@@ -174,9 +164,18 @@ document.addEventListener('DOMContentLoaded', function () {
     lastScrollY = current;
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  // Dùng requestAnimationFrame để mượt
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
-  // Khi click nút hamburger → ép hiện navbar
+  // Khi click nút hamburger → luôn hiện
   if (toggler) {
     toggler.addEventListener('click', function () {
       navbar.classList.remove('hide');
@@ -184,30 +183,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Xử lý trạng thái collapse (Bootstrap)
+  // Khi menu Bootstrap đóng / mở
   if (collapse) {
-    // Khi menu mobile mở → luôn hiện navbar
-    collapse.addEventListener('shown.bs.collapse', function () {
-      navbar.classList.remove('hide');
+    collapse.addEventListener('shown.bs.collapse', () => {
       navbar.classList.add('show');
+      navbar.classList.remove('hide');
     });
-
-    // Khi menu đóng → cập nhật lại vị trí cuộn
-    collapse.addEventListener('hidden.bs.collapse', function () {
+    collapse.addEventListener('hidden.bs.collapse', () => {
       lastScrollY = window.scrollY || 0;
     });
   }
 
-  // Khi resize → nếu chuyển sang mobile thì hiện navbar
-  window.addEventListener('resize', function () {
-    if (!isDesktop()) {
-      navbar.classList.remove('hide');
-      navbar.classList.add('show');
-    }
-    lastScrollY = window.scrollY || 0;
-  });
+  // Khi resize → không reset gì đặc biệt, vẫn giữ behavior chung
 });
-
 
 // Timeline js
 document.addEventListener("DOMContentLoaded", function () {
