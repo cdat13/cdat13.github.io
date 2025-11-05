@@ -1,23 +1,15 @@
 document.querySelectorAll(".tab").forEach(tab => {
   tab.addEventListener("click", () => {
     const target = tab.getAttribute("data-tab");
-
-    // Bỏ active ở tất cả
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
     document.querySelectorAll(".tab-content2").forEach(c => c.classList.remove("active"));
-
-    // Thêm active vào tab & content tương ứng
     tab.classList.add("active");
     document.getElementById(target).classList.add("active");
   });
 });
-
-// Open picture
 document.addEventListener('DOMContentLoaded', () => {
   const $ = sel => document.querySelector(sel);
   const $$ = sel => Array.from(document.querySelectorAll(sel));
-
-  // LIGHTBOX 
   const imgs = $$('.media-item img');
   const lightbox = $('#lightbox');
   const lightboxImg = $('#lightbox-img');
@@ -30,15 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         lightbox.style.display = 'block';
       });
     });
-
     closeBtn.addEventListener('click', () => {
       lightbox.style.display = 'none';
     });
-
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) lightbox.style.display = 'none';
     });
-
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && lightbox.style.display === 'block') {
         lightbox.style.display = 'none';
@@ -52,30 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
       closeBtn: !!closeBtn
     });
   }
-
-  // PAGINATION start here!
   const pagination = $('#pagination');
   const itemsPerPage = 3;
   let currentPage = 1;
-
   function setupPagination() {
     const activeTab = document.querySelector('.tab-content2.active');
-
     if (!activeTab) return;
-
     const items = Array.from(activeTab.querySelectorAll('.media-item'));
     const pageCount = Math.ceil(items.length / itemsPerPage) || 1;
-
     if (pageCount <= 1) {
       pagination.style.display = 'none';
       items.forEach(it => (it.style.display = 'block'));
       return;
     }
-
     pagination.innerHTML = '';
     pagination.style.display = 'flex';
-
-    // tạo nút phân trang
     for (let i = 1; i <= pageCount; i++) {
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -87,32 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       pagination.appendChild(btn);
     }
-
     showPage(1);
-
     function showPage(page) {
       const start = (page - 1) * itemsPerPage;
       const end = start + itemsPerPage;
       items.forEach((it, i) => {
         it.style.display = (i >= start && i < end) ? 'block' : 'none';
       });
-
       $$('.pagination button').forEach(b => b.classList.remove('active'));
       const activeBtn = document.querySelector(`.pagination button[data-page="${page}"]`);
       if (activeBtn) activeBtn.classList.add('active');
     }
   }
-
   setupPagination();
-
   $$('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       const targetId = tab.dataset.tab;
       $$('.tab, .tab-content2').forEach(el => el.classList.remove('active'));
       tab.classList.add('active');
       document.getElementById(targetId).classList.add('active');
-
-      // chạy lại pagination đúng tab
       setupPagination();
     });
   });
