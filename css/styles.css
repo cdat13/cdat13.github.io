@@ -15401,3 +15401,19 @@ html {
     font-size: 1rem;
   }
 }
+
+/* Khi hover vào cả li thì mở dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* Giữ đúng vị trí dropdown */
+.nav-item.dropdown:hover > .nav-link {
+    color: #000; /* tuỳ bạn */
+}
+
+/* Loại bỏ onclick mặc định của Bootstrap */
+.nav-item.dropdown > .nav-link.dropdown-toggle::after {
+    pointer-events: none;
+}
